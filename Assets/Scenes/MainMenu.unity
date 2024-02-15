@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 121601932}
   - component: {fileID: 121601933}
   - component: {fileID: 121601934}
+  - component: {fileID: 121601935}
   m_Layer: 0
   m_Name: Poster
   m_TagString: Untagged
@@ -434,6 +435,27 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!65 &121601935
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121601927}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9999999, y: 1, z: 1.1504264}
+  m_Center: {x: 0, y: 0, z: 0.07521308}
 --- !u!1 &175006345
 GameObject:
   m_ObjectHideFlags: 0
