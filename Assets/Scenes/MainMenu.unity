@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 121601932}
   - component: {fileID: 121601933}
   - component: {fileID: 121601934}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Poster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &121601934
 MonoBehaviour:
@@ -443,7 +443,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 175006346}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 224171121}
   - component: {fileID: 224171120}
   - component: {fileID: 224171124}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 409628860}
   - component: {fileID: 409628859}
   - component: {fileID: 409628863}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,7 +750,7 @@ GameObject:
   - component: {fileID: 461378452}
   - component: {fileID: 461378451}
   - component: {fileID: 461378455}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -938,6 +938,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Faretto
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dab160be94bbcff41b369ae51440d4f6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: dab160be94bbcff41b369ae51440d4f6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -964,7 +972,7 @@ GameObject:
   - component: {fileID: 704004576}
   - component: {fileID: 704004575}
   - component: {fileID: 704004579}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -999,7 +1007,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704004574}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1097,7 +1105,7 @@ GameObject:
   - component: {fileID: 952241161}
   - component: {fileID: 952241160}
   - component: {fileID: 952241164}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1231,7 +1239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 956690169170486037, guid: 1d798c0e23ce8e041902dc834aa64f21, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.94
+      value: -3.85
       objectReference: {fileID: 0}
     - target: {fileID: 956690169170486037, guid: 1d798c0e23ce8e041902dc834aa64f21, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1269,18 +1277,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin
       objectReference: {fileID: 0}
-    - target: {fileID: 2855855817470480729, guid: 1d798c0e23ce8e041902dc834aa64f21, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5621967301924123899, guid: 1d798c0e23ce8e041902dc834aa64f21, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7583834028650806334, guid: 1d798c0e23ce8e041902dc834aa64f21, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1299,7 +1295,7 @@ GameObject:
   - component: {fileID: 1914052181}
   - component: {fileID: 1914052180}
   - component: {fileID: 1914052184}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1527,7 +1523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1490115772003182329, guid: 120af62dcc6b2fa4bb94fcff2e7d5ca2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8687511222407493038, guid: 120af62dcc6b2fa4bb94fcff2e7d5ca2, type: 3}
       propertyPath: m_LocalPosition.x

@@ -13,23 +13,23 @@ public class Poster : MonoBehaviour
         
         sceneChanger = new SceneChanger();
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Player")
-        {
-            Debug.Log("Entro");
-            sceneChanger.lvl1();
-        }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if(collision.gameObject.tag == "Player")
+    //    {
+    //        Debug.Log("Entro");
+    //        sceneChanger.lvl1();
+    //    }
+    //}
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            Debug.Log("Entro");
-            sceneChanger.lvl1();
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.tag == "Player")
+    //    {
+    //        Debug.Log("Entro");
+    //        sceneChanger.lvl1();
+    //    }
+    //}
 
     public void goToLvl1()
     {
