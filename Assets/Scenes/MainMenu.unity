@@ -1320,14 +1320,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 654769916081643957, guid: 1d798c0e23ce8e041902dc834aa64f21, type: 3}
-      propertyPath: m_TurnAmount
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 654769916081643957, guid: 1d798c0e23ce8e041902dc834aa64f21, type: 3}
-      propertyPath: m_DebounceTime
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 956690169170486037, guid: 1d798c0e23ce8e041902dc834aa64f21, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

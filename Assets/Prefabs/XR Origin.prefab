@@ -935,8 +935,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 8102241614110981376}
-  m_TurnAmount: 15
-  m_DebounceTime: 0.5
+  m_TurnAmount: 30
+  m_DebounceTime: 0.2
   m_EnableTurnLeftRight: 1
   m_EnableTurnAround: 1
   m_DelayTime: 0
