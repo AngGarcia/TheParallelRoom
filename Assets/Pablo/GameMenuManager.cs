@@ -15,14 +15,14 @@ public class GameMenuManager : MonoBehaviour
     public GameObject RayInteractorObject;
     public GameObject DirectIntercatorObject;
     public GameObject quitButton;
-    SceneChanger sceneChanger;
 
+    public Slider m_musicSlider;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        sceneChanger = new SceneChanger();
+        m_musicSlider.value = GameManager.CommonVariablesInstance.volumeMusic;
     }
 
     // Update is called once per frame
@@ -32,6 +32,7 @@ public class GameMenuManager : MonoBehaviour
         {
             if(!menu.activeSelf)
             {
+                m_musicSlider.value = GameManager.CommonVariablesInstance.volumeMusic;
                 menu.SetActive(true);
                 RayInteractorObject.GetComponent<XRRayInteractor>().enabled = true;
                 DirectIntercatorObject.GetComponent<XRDirectInteractor>().enabled = false;
@@ -51,8 +52,18 @@ public class GameMenuManager : MonoBehaviour
                 menu.SetActive(false);
                 RayInteractorObject.GetComponent<XRRayInteractor>().enabled = false;
                 DirectIntercatorObject.GetComponent<XRDirectInteractor>().enabled = true;
+                MusicManager.Instance.MusicVolumeSave = m_musicSlider.value;
+                GameManager.CommonVariablesInstance.volumeMusic = m_musicSlider.value;
             }
             //menu.SetActive(!menu.activeSelf);
         }
+
+
+    }
+
+    public void onMusicValueChanged()
+    {
+        MusicManager.Instance.MusicVolume = m_musicSlider.value;
+        GameManager.CommonVariablesInstance.volumeMusic = m_musicSlider.value;
     }
 }

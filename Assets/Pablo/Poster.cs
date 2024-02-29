@@ -6,12 +6,9 @@ public class Poster : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    SceneChanger sceneChanger;
 
     private void Start()
     {
-        
-        sceneChanger = new SceneChanger();
     }
     //private void OnCollisionEnter(Collision collision)
     //{
@@ -33,6 +30,6 @@ public class Poster : MonoBehaviour
 
     public void goToLvl1()
     {
-        sceneChanger.lvl1();
+        GameManager.SceneChangerInstance.lvl1();
     }
 }

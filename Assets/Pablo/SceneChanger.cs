@@ -16,6 +16,8 @@ public class SceneChanger : MonoBehaviour
     {
         //StartCoroutine(delayLvl1());
         SceneManager.LoadScene("Lvl1_Mines");
+        GameManager.Instance.level = 1;
+        GameManager.Instance.saveToJson();
         Cursor.lockState = CursorLockMode.Locked;
     }
 

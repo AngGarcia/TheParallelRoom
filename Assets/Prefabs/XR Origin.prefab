@@ -1094,7 +1094,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3197593830171328773}
+        m_TargetAssemblyTypeName: GameMenuManager, Assembly-CSharp
+        m_MethodName: onMusicValueChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3170116444810885440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,6 +1220,7 @@ MonoBehaviour:
   RayInteractorObject: {fileID: 3447163900310158285}
   DirectIntercatorObject: {fileID: 7583834028650806334}
   quitButton: {fileID: 128628919535591674}
+  m_musicSlider: {fileID: 7829837888120770448}
 --- !u!1 &3447163900310158285
 GameObject:
   m_ObjectHideFlags: 0
