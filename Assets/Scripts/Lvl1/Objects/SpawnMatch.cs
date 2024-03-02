@@ -8,16 +8,15 @@ public class Spawn : MonoBehaviour
     public GameObject cerillaPrefab;
     public Transform spawnCerilla;
 
-    //private GameObject previousCerilla;
-
-
     public void cogerCerilla()
     {
 
         GameObject newCerilla = Instantiate(cerillaPrefab, spawnCerilla.position, Quaternion.identity);
 
-        newCerilla.transform.Rotate(new Vector3(180f, 0f, 0f));
+        //newCerilla.transform.Rotate(new Vector3(180f, 0f, 0f));
         newCerilla.transform.SetParent(this.gameObject.transform);
+
+        newCerilla.GetComponent<Match>().deactivateGravity();
 
     }
 }

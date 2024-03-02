@@ -7,6 +7,12 @@ public class ChangeGravel : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]
     private Mesh[] dirtMeshes;
+    [SerializeField]
+    private GameObject tnt;
+
+    //[SerializeField]
+   // private GameObject gravel;
+
     private int numCavados;
     void Start()
     {
@@ -20,7 +26,9 @@ public class ChangeGravel : MonoBehaviour
             Debug.Log(numCavados);
             if (numCavados > 1)
             {
-                this.gameObject.GetComponent<MeshCollider>().isTrigger = false;
+
+                this.GetComponent<MeshCollider>().isTrigger = false;
+                tnt.SetActive(true);
             }
             else
             {

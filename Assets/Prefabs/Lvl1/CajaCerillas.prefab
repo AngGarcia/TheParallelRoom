@@ -920,7 +920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff779e5af450b7d4a960ac8047726523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cerillaPrefab: {fileID: 3967684256233439893, guid: 981a2985a2b03aa40a8a7236d72838cf, type: 3}
+  cerillaPrefab: {fileID: 8454436214471025100, guid: e4ce8e0332957c046a63f2e2454b9943, type: 3}
   spawnCerilla: {fileID: 8235904234081244613}
 --- !u!1 &6792631138672837762
 GameObject:
