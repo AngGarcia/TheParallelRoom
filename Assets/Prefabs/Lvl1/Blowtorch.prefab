@@ -57,14 +57,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937528332573807987}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.509164, y: -0, z: -0, w: 0.86066955}
-  m_LocalPosition: {x: 0.007799983, y: 0.3172, z: 0.1938}
+  m_LocalRotation: {x: 0.34741554, y: -0, z: -0, w: 0.9377113}
+  m_LocalPosition: {x: 0, y: 0.379, z: 0.156}
   m_LocalScale: {x: 0.032057554, y: 0.17736222, z: 0.019558115}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4852114792385350520}
   m_Father: {fileID: 5846720259706053498}
-  m_LocalEulerAnglesHint: {x: 61.216, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 40.659, y: 0, z: 0}
 --- !u!33 &7556649608209360429
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2585206504823137033}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.374, y: 0.174, z: 3.473}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -420,15 +420,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2105148263537739512, guid: 898f37dcba594a843b16e80e4b4216bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2105148263537739512, guid: 898f37dcba594a843b16e80e4b4216bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.989
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2105148263537739512, guid: 898f37dcba594a843b16e80e4b4216bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2105148263537739512, guid: 898f37dcba594a843b16e80e4b4216bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -461,6 +461,26 @@ PrefabInstance:
     - target: {fileID: 4047225584165238439, guid: 898f37dcba594a843b16e80e4b4216bd, type: 3}
       propertyPath: m_Name
       value: BlowtorchFlame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784180002411838264, guid: 898f37dcba594a843b16e80e4b4216bd, type: 3}
+      propertyPath: ShapeModule.type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784180002411838264, guid: 898f37dcba594a843b16e80e4b4216bd, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784180002411838264, guid: 898f37dcba594a843b16e80e4b4216bd, type: 3}
+      propertyPath: LightsModule.ratio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784180002411838264, guid: 898f37dcba594a843b16e80e4b4216bd, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784180002411838264, guid: 898f37dcba594a843b16e80e4b4216bd, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
