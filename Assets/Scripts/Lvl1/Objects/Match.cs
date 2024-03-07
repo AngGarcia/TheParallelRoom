@@ -5,18 +5,15 @@ using UnityEngine;
 public class Match : MonoBehaviour
 {
     [SerializeField]
-    private GameObject kinematicMatch;
-    [SerializeField]
-    private GameObject gravityMatch;
+    private Rigidbody rigidbody;
+
     public void activateGravity()
     {
-        kinematicMatch.SetActive(false);
-        gravityMatch.SetActive(true);
+        rigidbody.isKinematic = false;
     }
 
     public void deactivateGravity()
     {
-        kinematicMatch.SetActive(true);
-        gravityMatch.SetActive(false);
+        rigidbody.isKinematic = true;
     }
 }
