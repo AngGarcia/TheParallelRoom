@@ -121,4 +121,12 @@ public class GameManager : PersistentSingleton<GameManager>
         }
     }
 
+    public void resetProgress()
+    {
+
+        LastSceneDataInstance.lastLevel= 0;
+        saveToJson();
+        sceneChangerInstance.mainMenu();
+    }
+
 }

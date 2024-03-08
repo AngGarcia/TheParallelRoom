@@ -5,10 +5,27 @@ using UnityEngine;
 public class Poster : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public GameObject poster;
+    public Material poster1;
+    public Material poster2;
+    public Material poster3;
 
     private void Start()
     {
+        if (GameManager.LastSceneDataInstance.lastLevel <=1)
+        {
+            poster.GetComponent<MeshRenderer>().material = poster1;
+        }
+
+        else if(GameManager.LastSceneDataInstance.lastLevel <= 2)
+        {
+            poster.GetComponent<MeshRenderer>().material = poster2;
+        }
+
+        else
+        {
+            poster.GetComponent<MeshRenderer>().material = poster3;
+        }
     }
     //private void OnCollisionEnter(Collision collision)
     //{

@@ -1220,6 +1220,7 @@ MonoBehaviour:
   RayInteractorObject: {fileID: 3447163900310158285}
   DirectIntercatorObject: {fileID: 7583834028650806334}
   quitButton: {fileID: 128628919535591674}
+  resetButton: {fileID: 0}
   m_musicSlider: {fileID: 7829837888120770448}
 --- !u!1 &3447163900310158285
 GameObject:
@@ -1433,7 +1434,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.005
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -1444,8 +1445,17 @@ LineRenderer:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
