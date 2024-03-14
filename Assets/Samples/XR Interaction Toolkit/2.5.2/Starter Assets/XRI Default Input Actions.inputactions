@@ -961,10 +961,10 @@
                 {
                     "name": "",
                     "id": "964ae6f3-dc5b-429a-8f60-a76409e75472",
-                    "path": "<XRController>{LeftHand}/menuButton",
+                    "path": "<XRController>{LeftHand}/{MenuButton}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
