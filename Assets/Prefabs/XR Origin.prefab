@@ -1205,6 +1205,7 @@ MonoBehaviour:
   head: {fileID: 6505704240715195738}
   spawnDistance: 0.5
   menu: {fileID: 6408609919010866776}
+  confirmationCanvas: {fileID: 0}
   showButton:
     m_UseReference: 1
     m_Action:
@@ -1222,6 +1223,10 @@ MonoBehaviour:
   quitButton: {fileID: 128628919535591674}
   resetButton: {fileID: 0}
   m_musicSlider: {fileID: 7829837888120770448}
+  maxPositionX: 3.3
+  minPositionX: -3.3
+  maxPositionZ: 3.3
+  minPositionZ: -3.3
 --- !u!1 &3447163900310158285
 GameObject:
   m_ObjectHideFlags: 0
