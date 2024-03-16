@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Shovel
   - Flame
+  - Crowbar
+  - Key
   layers:
   - Default
   - TransparentFX

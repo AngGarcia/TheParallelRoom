@@ -21,7 +21,7 @@ public class ChangeGravel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Shovel"))
+        if (other.gameObject.CompareTag("Crowbar"))
         {
             Debug.Log(numCavados);
             if (numCavados > 1)
