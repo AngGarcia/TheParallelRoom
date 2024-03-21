@@ -28,6 +28,27 @@ public class KeypadButton : MonoBehaviour
         interactable.selectEntered.AddListener(Freeze);
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        if (freeze)
+        {
+            return;
+        }
+
+        if (isFollowing)
+        {
+            Vector3 localTargetPosition = visualTarget.InverseTransformPoint(pokeAttachTransform.position + offset);
+            Vector3 constrainedLocalPosition = Vector3.Project(localTargetPosition, localAxis);
+
+            visualTarget.position = visualTarget.TransformPoint(constrainedLocalPosition);
+        }
+        else
+        {
+            visualTarget.localPosition = Vector3.Lerp(visualTarget.localPosition, initialLocalPos, Time.deltaTime * resetSpeed);
+        }
+    }
+
     public void Follow(BaseInteractionEventArgs hover)
     {
         if(hover.interactorObject is XRPokeInteractor)
@@ -60,27 +81,6 @@ public class KeypadButton : MonoBehaviour
         if (hover.interactorObject is XRPokeInteractor)
         {
             freeze = true;
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (freeze)
-        {
-            return;
-        }
-
-        if (isFollowing)
-        {
-            Vector3 localTargetPosition = visualTarget.InverseTransformPoint(pokeAttachTransform.position + offset);
-            Vector3 constrainedLocalPosition = Vector3.Project(localTargetPosition, localAxis);
-
-            visualTarget.position = visualTarget.TransformPoint(constrainedLocalPosition);
-        }
-        else
-        {
-            visualTarget.localPosition = Vector3.Lerp(visualTarget.localPosition, initialLocalPos, Time.deltaTime * resetSpeed);
         }
     }
 }
