@@ -13,6 +13,7 @@ public class GameMenuManager : MonoBehaviour
     public GameObject menu;
     public GameObject confirmationCanvas;
     public InputActionProperty showButton;
+    public GameObject mandoIzquierdo;
     public GameObject RayInteractorObject;
     public GameObject DirectIntercatorObject;
     public GameObject quitButton;
@@ -43,6 +44,7 @@ public class GameMenuManager : MonoBehaviour
                 menu.SetActive(true);
                 RayInteractorObject.GetComponent<XRRayInteractor>().enabled = true;
                 DirectIntercatorObject.GetComponent<XRDirectInteractor>().enabled = false;
+                mandoIzquierdo.GetComponent<XRDirectInteractor>().enabled= false;
                 menu.transform.position = head.position + new Vector3(head.forward.x,0,head.forward.z).normalized * spawnDistance;
                 
 
@@ -89,6 +91,7 @@ public class GameMenuManager : MonoBehaviour
                 menu.SetActive(false);
                 RayInteractorObject.GetComponent<XRRayInteractor>().enabled = false;
                 DirectIntercatorObject.GetComponent<XRDirectInteractor>().enabled = true;
+                mandoIzquierdo.GetComponent<XRDirectInteractor>().enabled = true;
                 MusicManager.Instance.MusicVolumeSave = m_musicSlider.value;
                 GameManager.CommonVariablesInstance.volumeMusic = m_musicSlider.value;
             }
@@ -103,6 +106,7 @@ public class GameMenuManager : MonoBehaviour
         menu.SetActive(false);
         RayInteractorObject.GetComponent<XRRayInteractor>().enabled = false;
         DirectIntercatorObject.GetComponent<XRDirectInteractor>().enabled = true;
+        mandoIzquierdo.GetComponent<XRDirectInteractor>().enabled = true;
         MusicManager.Instance.MusicVolumeSave = m_musicSlider.value;
         GameManager.CommonVariablesInstance.volumeMusic = m_musicSlider.value;
     }
@@ -112,6 +116,7 @@ public class GameMenuManager : MonoBehaviour
         menu.SetActive(false);
         RayInteractorObject.GetComponent<XRRayInteractor>().enabled = false;
         DirectIntercatorObject.GetComponent<XRDirectInteractor>().enabled = true;
+        mandoIzquierdo.GetComponent<XRDirectInteractor>().enabled = true;
         MusicManager.Instance.MusicVolumeSave = m_musicSlider.value;
         GameManager.CommonVariablesInstance.volumeMusic = m_musicSlider.value;
 
@@ -119,6 +124,7 @@ public class GameMenuManager : MonoBehaviour
         confirmationCanvas.SetActive(true);
         RayInteractorObject.GetComponent<XRRayInteractor>().enabled = true;
         DirectIntercatorObject.GetComponent<XRDirectInteractor>().enabled = false;
+        mandoIzquierdo.GetComponent<XRDirectInteractor>().enabled = false;
         confirmationCanvas.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized * spawnDistance;
         confirmationCanvas.transform.LookAt(new Vector3(head.position.x, confirmationCanvas.transform.position.y, head.position.z));
         confirmationCanvas.transform.forward *= -1;
@@ -131,6 +137,7 @@ public class GameMenuManager : MonoBehaviour
         menu.SetActive(true);
         RayInteractorObject.GetComponent<XRRayInteractor>().enabled = true;
         DirectIntercatorObject.GetComponent<XRDirectInteractor>().enabled = false;
+        mandoIzquierdo.GetComponent<XRDirectInteractor>().enabled = false;
         menu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized * spawnDistance;
 
         if (menu.transform.position.x > maxPositionX)
