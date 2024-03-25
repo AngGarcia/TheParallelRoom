@@ -31,7 +31,7 @@ public class Keypad : MonoBehaviour
     {
         if (textGlass.text.Length >= numMaxDigitos)
         {
-            Debug.Log("No se puede escribir m?as");
+           // Debug.Log("No se puede escribir m?as");
             canType = false;
         }
 
