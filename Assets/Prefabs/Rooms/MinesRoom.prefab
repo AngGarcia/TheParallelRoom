@@ -8272,6 +8272,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Detonator (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4154691829124624044, guid: 8b340fca0e5f1394793c80c11578b90b, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 3.2194207
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154691829124624044, guid: 8b340fca0e5f1394793c80c11578b90b, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -4.664753
+      objectReference: {fileID: 0}
     - target: {fileID: 6130851354468728448, guid: 8b340fca0e5f1394793c80c11578b90b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.4260983
