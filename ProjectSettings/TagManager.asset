@@ -9,6 +9,8 @@ TagManager:
   - Crowbar
   - Key
   - BlowtorchFlame
+  - LeftHandTriggerCollider
+  - RightHandTriggerCollider
   layers:
   - Default
   - TransparentFX

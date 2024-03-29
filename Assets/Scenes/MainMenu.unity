@@ -245,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poster: {fileID: 121601927}
   poster1: {fileID: 2100000, guid: 982309d589be4e047b1fc26ed3d882a7, type: 2}
-  poster2: {fileID: 2100000, guid: fd61c6b4cb1242149b80f2abfb60dfa1, type: 2}
+  poster2: {fileID: 2100000, guid: d89e2de3ef7f8b34299a577a3dfe2a77, type: 2}
   poster3: {fileID: 2100000, guid: 88f504f4383ff7442958a43077af68ea, type: 2}
 --- !u!54 &121601933
 Rigidbody:
@@ -3962,6 +3962,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 7436888978141209588, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  mandoIzquierdo: {fileID: 0}
   RayInteractorObject: {fileID: 1988370152}
   DirectIntercatorObject: {fileID: 131774728}
   quitButton: {fileID: 2003108606}

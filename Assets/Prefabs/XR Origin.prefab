@@ -1218,6 +1218,7 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 7436888978141209588, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  mandoIzquierdo: {fileID: 0}
   RayInteractorObject: {fileID: 3447163900310158285}
   DirectIntercatorObject: {fileID: 7583834028650806334}
   quitButton: {fileID: 128628919535591674}
