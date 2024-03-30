@@ -15,6 +15,7 @@ public class Match : MonoBehaviour
     public void activateGravity()
     {
         rigidbody.isKinematic = false;
+        this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
     }
 
     public void deactivateGravity()
