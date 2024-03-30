@@ -11,6 +11,12 @@ public class Keypad : MonoBehaviour
     private TMP_Text textGlass;
     [SerializeField]
     private LockerDoor lockerDoor;
+    [SerializeField]
+    private GameObject pokeInteractor;
+    [SerializeField]
+    private BoxCollider controllerCollider;
+    [SerializeField]
+    private BoxCollider keypadCollider;
 
     private string actualCode = "4598";
     private int numMaxDigitos;
@@ -43,6 +49,7 @@ public class Keypad : MonoBehaviour
         {
             actualText = actualText + numToType.ToString();
             textGlass.text = actualText;
+            Debug.Log(numToType + " tipeado");
         }
     }
 
@@ -60,12 +67,13 @@ public class Keypad : MonoBehaviour
     {
         if (textGlass.text == actualCode)
         {
-            Debug.Log("CONSEGUIDOOO!!");
             canType = false;
             done = true;
 
-            //hacer la movida de activar lo que sea
             lockerDoor.OpenDoor();
+            keypadCollider.enabled = false;
+            pokeInteractor.SetActive(false);
+            controllerCollider.enabled = true;
         }
         else
         {

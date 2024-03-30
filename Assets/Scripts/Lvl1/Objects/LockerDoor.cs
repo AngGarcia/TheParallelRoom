@@ -17,6 +17,8 @@ public class LockerDoor : MonoBehaviour
     public void OpenDoor()
     {
         Debug.Log("Abriendo puerta...");
+        doorJoint.xMotion = ConfigurableJointMotion.Limited;
+        doorJoint.angularXMotion = ConfigurableJointMotion.Limited;
         doorJoint.targetRotation = Quaternion.Euler(20f, 0f, 0f);
     }
 }
