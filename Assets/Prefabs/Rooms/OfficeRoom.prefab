@@ -411,6 +411,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.011318684
       objectReference: {fileID: 0}
+    - target: {fileID: 220087117708443276, guid: fa25a162fc973a04ab626f27ac440692, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2985195747535652153, guid: 7c266318cfa7d0047b485d51c9521aeb, type: 3}
     - target: {fileID: 813891666010228579, guid: fa25a162fc973a04ab626f27ac440692, type: 3}
       propertyPath: m_Name
       value: MainOffice
@@ -773,6 +777,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.011316776
       objectReference: {fileID: 0}
+    - target: {fileID: 220087117708443276, guid: fa25a162fc973a04ab626f27ac440692, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2985195747535652153, guid: 7c266318cfa7d0047b485d51c9521aeb, type: 3}
     - target: {fileID: 813891666010228579, guid: fa25a162fc973a04ab626f27ac440692, type: 3}
       propertyPath: m_Name
       value: ParallelOffice
