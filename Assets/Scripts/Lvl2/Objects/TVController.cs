@@ -7,8 +7,23 @@ public class TVController : MonoBehaviour
     [SerializeField]
     private GameObject tvScreen;
 
+    private bool switchTV;
+
+    private void Start()
+    {
+        switchTV = false;
+    }
+
     public void turnOnTV()
     {
-        tvScreen.SetActive(true);
+        if(switchTV){
+            tvScreen.SetActive(false);
+            switchTV = false;
+        }
+        else
+        {
+            tvScreen.SetActive(true);
+            switchTV = true;
+        }
     }
 }
