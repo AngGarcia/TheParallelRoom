@@ -11,6 +11,7 @@ TagManager:
   - BlowtorchFlame
   - LeftHandTriggerCollider
   - RightHandTriggerCollider
+  - Match
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Objects
   - Player
   - PokePoint
-  - 
+  - Pieza
   - 
   - 
   - 

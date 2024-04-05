@@ -4929,7 +4929,7 @@ GameObject:
   - component: {fileID: 7873159530449850336}
   m_Layer: 0
   m_Name: Match
-  m_TagString: Untagged
+  m_TagString: Match
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
