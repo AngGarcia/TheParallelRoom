@@ -12,9 +12,13 @@ public class Keypad : MonoBehaviour
     [SerializeField]
     private LockerDoor lockerDoor;
     [SerializeField]
-    private GameObject pokeInteractor;
+    private GameObject pokeInteractor1;
     [SerializeField]
-    private BoxCollider controllerCollider;
+    private GameObject pokeInteractor2;
+    [SerializeField]
+    private BoxCollider leftControllerCollider;
+    [SerializeField]
+    private BoxCollider rightControllerCollider;
     [SerializeField]
     private BoxCollider keypadCollider;
 
@@ -72,8 +76,10 @@ public class Keypad : MonoBehaviour
 
             lockerDoor.OpenDoor();
             keypadCollider.enabled = false;
-            pokeInteractor.SetActive(false);
-            controllerCollider.enabled = true;
+            pokeInteractor1.SetActive(false);
+            pokeInteractor2.SetActive(false);
+            leftControllerCollider.enabled = true;
+            rightControllerCollider.enabled = true;
         }
         else
         {

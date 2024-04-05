@@ -1047,7 +1047,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570627741867459947}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: 6.9, y: 1.27, z: 4.47}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
@@ -1061,7 +1061,7 @@ Transform:
   - {fileID: 2398438462432739723}
   - {fileID: 6955649212038646053}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &3065100209643466049
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2696,9 +2696,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textGlass: {fileID: 5593054827471790442}
   lockerDoor: {fileID: 8783815684157317015}
-  pokeInteractor: {fileID: 0}
-  controllerCollider: {fileID: 0}
-  keypadCollider: {fileID: 0}
+  pokeInteractor1: {fileID: 0}
+  pokeInteractor2: {fileID: 0}
+  leftControllerCollider: {fileID: 0}
+  rightControllerCollider: {fileID: 0}
+  keypadCollider: {fileID: 2342682301577643456}
 --- !u!1 &5458582679881593394
 GameObject:
   m_ObjectHideFlags: 0
@@ -4833,8 +4835,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe83cd2c12993c042a43e6de68e71e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pokeInteractor: {fileID: 0}
-  controllerCollider: {fileID: 0}
+  pokeInteractor1: {fileID: 0}
+  pokeInteractor2: {fileID: 0}
 --- !u!1 &8483795926496536244
 GameObject:
   m_ObjectHideFlags: 0

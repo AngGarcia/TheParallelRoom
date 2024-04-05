@@ -6,16 +6,20 @@ public class TriggerKeypad : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
-    private GameObject pokeInteractor;
+    private GameObject pokeInteractor1;
     [SerializeField]
-    private BoxCollider controllerCollider;
+    private GameObject pokeInteractor2;
+    //[SerializeField]
+    // private BoxCollider controllerCollider;
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            pokeInteractor.SetActive(true);
-            controllerCollider.enabled = false;
+            pokeInteractor1.SetActive(true);
+            pokeInteractor2.SetActive(true);
+            //controllerCollider.enabled = false;
+            other.gameObject.GetComponent<BoxCollider>().enabled = false;
         }
     }
 
@@ -23,8 +27,10 @@ public class TriggerKeypad : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            pokeInteractor.SetActive(false);
-            controllerCollider.enabled = true;
+            pokeInteractor1.SetActive(false);
+            pokeInteractor2.SetActive(false);
+            //controllerCollider.enabled = true;
+            other.gameObject.GetComponent<BoxCollider>().enabled = true;
         }
     }
 }
