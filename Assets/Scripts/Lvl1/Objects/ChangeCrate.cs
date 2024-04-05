@@ -23,6 +23,7 @@ public class ChangeCrate : MonoBehaviour
             {
                 //objectInside.SetActive(true);
                 this.GameObject().SetActive(false);
+                objectInside.SetActive(true);
             }
         }
     }

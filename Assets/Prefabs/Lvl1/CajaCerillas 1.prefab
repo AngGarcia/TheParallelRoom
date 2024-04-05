@@ -662,8 +662,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.00036654918, y: 0.00062597444, z: 0.00015432524}
-  m_Center: {x: 0.00000019147991, y: 0.00006290444, z: -0.000004037726}
+  m_Size: {x: 0.00087584433, y: 0.0008595383, z: 0.0004976052}
+  m_Center: {x: -0.000033955836, y: 0.00017968654, z: -0.000014185607}
 --- !u!54 &6587760813606551815
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ public class Lamp : MonoBehaviour
 
     public Material lightUpMat;
     public GameObject pointLightObj;
+    [SerializeField]
+    private GameObject codigo;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class Lamp : MonoBehaviour
         {
             this.gameObject.GetComponent<MeshRenderer>().material = lightUpMat;
             pointLightObj.SetActive(true);
+            codigo.SetActive(true);
         }
     }
 }
