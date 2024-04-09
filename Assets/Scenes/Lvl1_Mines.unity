@@ -394,6 +394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MinesRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 2034523861131105771, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2175493931414598216, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.162
@@ -405,6 +409,10 @@ PrefabInstance:
     - target: {fileID: 2175493931414598216, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.142
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847213506018794846, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3035712994863555445, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: m_IsActive
@@ -502,7 +510,15 @@ PrefabInstance:
       propertyPath: controllerCollider
       value: 
       objectReference: {fileID: 865684289}
+    - target: {fileID: 7998907546236732448, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8087804947437438915, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8142457996329910431, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
