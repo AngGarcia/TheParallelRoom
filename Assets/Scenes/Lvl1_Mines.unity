@@ -123,6 +123,32 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &161427007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6849436045092089283, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+  m_PrefabInstance: {fileID: 1224535787}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &161427008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161427007}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.013774822, y: 0.010463682, z: 0.00032712697}
+  m_Center: {x: 0.0018765866, y: 0.00003586888, z: 0.00016356348}
 --- !u!1 &354909904
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,15 +350,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2175493931414598216, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.63
+      value: -0.162
       objectReference: {fileID: 0}
     - target: {fileID: 2175493931414598216, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.591
+      value: -1.347
       objectReference: {fileID: 0}
     - target: {fileID: 2175493931414598216, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.6
+      value: -1.142
       objectReference: {fileID: 0}
     - target: {fileID: 3035712994863555445, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: m_IsActive
@@ -454,6 +480,14 @@ PrefabInstance:
       propertyPath: rightControllerCollider
       value: 
       objectReference: {fileID: 865684289}
+    - target: {fileID: 9206000483389681428, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+      propertyPath: normalMesh
+      value: 
+      objectReference: {fileID: -7227773336811663253, guid: bafc581a3487f6040a30e1590674db60, type: 3}
+    - target: {fileID: 9206000483389681428, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+      propertyPath: secondMesh
+      value: 
+      objectReference: {fileID: -7978816751027315634, guid: 8a9216257c4bd1a48b05280d13fc4f4a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -464,6 +498,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8013101990800757787, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1201270370}
+    - targetCorrespondingSourceObject: {fileID: 9190303814819553346, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1658641606}
+    - targetCorrespondingSourceObject: {fileID: 6849436045092089283, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 161427008}
   m_SourcePrefab: {fileID: 100100000, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
 --- !u!1 &1224535788 stripped
 GameObject:
@@ -566,6 +606,32 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 7308194987671120147, guid: ee3aeaddf9af14341955071c55f3d73e, type: 3}
   m_PrefabInstance: {fileID: 865684288}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1658641605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9190303814819553346, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+  m_PrefabInstance: {fileID: 1224535787}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1658641606
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658641605}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 0.01425107, y: 0.010313014, z: 0.00038827836}
+  m_Center: {x: 0.0017924261, y: -0.000176602, z: 0.00019413859}
 --- !u!1 &1736902020
 GameObject:
   m_ObjectHideFlags: 0
