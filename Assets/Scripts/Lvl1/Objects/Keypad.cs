@@ -16,6 +16,8 @@ public class Keypad : MonoBehaviour
     [SerializeField]
     private GameObject pokeInteractor2;
     [SerializeField]
+    private GameObject shovel;
+    [SerializeField]
     private BoxCollider leftControllerCollider;
     [SerializeField]
     private BoxCollider rightControllerCollider;
@@ -78,6 +80,7 @@ public class Keypad : MonoBehaviour
             keypadCollider.enabled = false;
             pokeInteractor1.SetActive(false);
             pokeInteractor2.SetActive(false);
+            shovel.SetActive(true);
             leftControllerCollider.enabled = true;
             rightControllerCollider.enabled = true;
         }

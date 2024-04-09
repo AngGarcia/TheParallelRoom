@@ -9,6 +9,8 @@ public class DestructableHinge : MonoBehaviour
     [SerializeField]
     private Rigidbody rb;
     private XRGrabInteractable GI;
+    [SerializeField]
+    private GameObject itemInside;
 
     private static int numberOfHinges = 2;
 
@@ -20,13 +22,14 @@ public class DestructableHinge : MonoBehaviour
 
     public void restaNOH()
     {
-        Debug.Log(numberOfHinges);
+        //Debug.Log(numberOfHinges);
         numberOfHinges--;
         if(numberOfHinges <= 0)
         {
             joint.breakForce = 0.001f;
             rb.useGravity = true;
             GI.movementType = XRBaseInteractable.MovementType.Instantaneous;
+            itemInside.SetActive(true);
         }
     }
 }
