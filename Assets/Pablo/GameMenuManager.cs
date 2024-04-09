@@ -182,4 +182,9 @@ public class GameMenuManager : MonoBehaviour
         MusicManager.Instance.MusicVolume = m_musicSlider.value;
         GameManager.CommonVariablesInstance.volumeMusic = m_musicSlider.value;
     }
+
+    public void onQuitToMenu()
+    {
+        GameManager.SceneChangerInstance.mainMenu();
+    }
 }
