@@ -6,35 +6,32 @@ public class ChangeGravel : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
-    private Mesh[] dirtMeshes;
+    private Mesh normalMesh;
+    [SerializeField]
+    private Mesh secondMesh;
     [SerializeField]
     private GameObject tnt;
 
-    //[SerializeField]
-   // private GameObject gravel;
-
-    private int numCavados;
     void Start()
     {
-        numCavados = 0;
+        tnt.SetActive(false);
+        this.gameObject.GetComponent<MeshFilter>().mesh = normalMesh;
+        this.gameObject.GetComponent<MeshCollider>().isTrigger = true;
+        this.gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Crowbar"))
+        if (other.gameObject.CompareTag("Shovel"))
         {
-            Debug.Log(numCavados);
-            if (numCavados > 1)
-            {
 
-                this.GetComponent<MeshCollider>().isTrigger = false;
-                tnt.SetActive(true);
-            }
-            else
-            {
-                numCavados++;
-                this.gameObject.GetComponent<MeshFilter>().mesh = dirtMeshes[numCavados];
-            }
+            this.gameObject.GetComponent<MeshFilter>().mesh = secondMesh;
+            tnt.SetActive(true);
+            // this.gameObject.GetComponent<MeshCollider>().isTrigger = false;
+            this.gameObject.GetComponent<MeshCollider>().enabled = false;
+            this.gameObject.GetComponent<BoxCollider>().enabled = true;
+
+
         }
     }
 
