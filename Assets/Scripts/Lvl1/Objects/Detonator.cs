@@ -6,20 +6,14 @@ public class Detonator : MonoBehaviour
 {
     [SerializeField]
     private DinamiteSocket DinamiteSocket;
-    private Transform startTransform;
+    [SerializeField]
+    private Tape tape;
 
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        startTransform = this.transform;    
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(Mathf.Abs(startTransform.position.y) - Mathf.Abs(transform.position.y) < 0.35f);
-        if(Mathf.Abs(startTransform.position.y) - Mathf.Abs(transform.position.y) < 0.35f && DinamiteSocket.getNumTnt() >= 3)
+        if(other.tag == "Lever" && DinamiteSocket.getNumTnt() )
         {
-            Debug.Log("EXPLOSION");
+            Debug.Log("Exploooooooooooooooooooosion");
         }
     }
 }

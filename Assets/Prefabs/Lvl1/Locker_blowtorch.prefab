@@ -659,7 +659,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0.003, y: 0.0039, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 2.0160732, y: 1.3401362, z: 2.1823535}
+  m_ConnectedAnchor: {x: 2.0160732, y: 1.3401449, z: 2.1573536}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -762,6 +762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 42603380277270272}
+  itemInside: {fileID: 0}
 --- !u!1 &4988283361547398023
 GameObject:
   m_ObjectHideFlags: 0

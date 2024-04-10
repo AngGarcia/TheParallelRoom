@@ -10,18 +10,18 @@ public class DinamiteSocket : MonoBehaviour
     private int numTnt = 0;
     private void OnTriggerEnter(Collider other)
     {
-        for (int i = 0; i < numTnt; i++)
-            if (other.tag == "TNT")
-            {
+        
+        if (other.tag == "TNT")
+        {
+            numTnt++;
+            other.gameObject.SetActive(false);
+            for (int i = 0; i < numTnt; i++)
                 tnt[i].gameObject.SetActive(true);
-                other.gameObject.SetActive(false);
-            }
-
-        numTnt++;
+        }
     }
 
-    public int getNumTnt()
+    public bool getNumTnt()
     {
-        return numTnt;
+        return (numTnt >= 3);
     }
 }

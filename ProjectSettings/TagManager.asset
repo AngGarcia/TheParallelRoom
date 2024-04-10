@@ -12,6 +12,9 @@ TagManager:
   - LeftHandTriggerCollider
   - RightHandTriggerCollider
   - Match
+  - Tape
+  - TNT
+  - Lever
   layers:
   - Default
   - TransparentFX
@@ -24,7 +27,7 @@ TagManager:
   - Player
   - PokePoint
   - Pieza
-  - 
+  - LockerDoor
   - 
   - 
   - 

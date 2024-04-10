@@ -17,10 +17,12 @@ public class Tape : MonoBehaviour
 
     private bool canFix;
     private int cablePack;
+    private int numFixed;
     void Start()
     {
         canFix = false;
         cablePack = 0;
+        numFixed = 0;
     }
 
     public void fixCable()
@@ -31,11 +33,13 @@ public class Tape : MonoBehaviour
             {
                 fixedCable1.SetActive(true);
                 brokenCable1.SetActive(false);
+                numFixed++;
             }
             else if(cablePack == 2)
             {
                 fixedCable2.SetActive(true);
                 brokenCable2.SetActive(false);
+                numFixed++;
             }
         }
     }
@@ -53,5 +57,10 @@ public class Tape : MonoBehaviour
     public void stateCable(int num)
     {
         cablePack = num;
+    }
+
+    public bool isCableFixed()
+    {
+        return (numFixed >= 2);
     }
 }

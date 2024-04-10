@@ -4927,7 +4927,7 @@ GameObject:
   - component: {fileID: 2384376719206104014}
   - component: {fileID: 2256947407541036746}
   - component: {fileID: 7873159530449850336}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Match
   m_TagString: Match
   m_Icon: {fileID: 0}
