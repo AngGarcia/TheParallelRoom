@@ -8,11 +8,14 @@ public class Detonator : MonoBehaviour
     private DinamiteSocket DinamiteSocket;
     [SerializeField]
     private Tape tape;
+    [SerializeField]
+    private GameObject rocks;
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Lever" && DinamiteSocket.getNumTnt() )
+        if(other.tag == "Lever" && DinamiteSocket.getNumTnt() && tape.isCableFixed())
         {
+            rocks.SetActive(false);
             Debug.Log("Exploooooooooooooooooooosion");
         }
     }

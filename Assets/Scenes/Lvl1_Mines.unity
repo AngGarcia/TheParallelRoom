@@ -169,7 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DinamiteSocket: {fileID: 1736902022}
-  tape: {fileID: 0}
+  tape: {fileID: 1224535794}
+  rocks: {fileID: 967748229}
 --- !u!65 &304314528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -424,6 +425,11 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 2180306654649703011, guid: ee3aeaddf9af14341955071c55f3d73e, type: 3}
   m_PrefabInstance: {fileID: 865684288}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &967748229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7106352578162264381, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+  m_PrefabInstance: {fileID: 1224535787}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1201270366 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8013101990800757787, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
@@ -443,6 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DinamiteSocket: {fileID: 0}
   tape: {fileID: 0}
+  rocks: {fileID: 0}
 --- !u!1001 &1224535787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -698,6 +705,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8142457996329910431, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
   m_PrefabInstance: {fileID: 1224535787}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1224535794 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1387852351780864368, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+  m_PrefabInstance: {fileID: 1224535787}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224535789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8810eafd3e9b92249abf912b82b32f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1255781715
 PrefabInstance:
   m_ObjectHideFlags: 0
