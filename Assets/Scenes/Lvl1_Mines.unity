@@ -628,6 +628,10 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4690273647528043007, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5478914742578539535, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: m_Layer
       value: 11
@@ -744,6 +748,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -7227773336811663253, guid: 69cf5f7fa046d354ea113dc077262978, type: 3}
+    - target: {fileID: 8773810546983172019, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8822718144308682122, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: shovel
       value: 
