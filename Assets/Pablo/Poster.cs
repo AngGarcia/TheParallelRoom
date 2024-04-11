@@ -10,6 +10,7 @@ public class Poster : MonoBehaviour
     public Material poster2;
     public Material poster3;
 
+
     private void Start()
     {
         if (GameManager.LastSceneDataInstance.lastLevel <=1)

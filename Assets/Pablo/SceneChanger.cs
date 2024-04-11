@@ -8,58 +8,73 @@ public class SceneChanger : MonoBehaviour
     // Start is called before the first frame update
     //public AudioSource audioSource;
     //public AudioClip button;
+    public FadeScreen fadeScreen;
     private void Start()
     {
         Time.timeScale = 1;
+
+        if(GameObject.FindWithTag("faderScreen")!=null)
+            fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
     }
+
+
     public void lvl1()
     {
-        //StartCoroutine(delayLvl1());
-        SceneManager.LoadScene("Lvl1_Mines");
-        GameManager.Instance.level = 1;
-        GameManager.Instance.saveToJson();
-        Cursor.lockState = CursorLockMode.Locked;
+        StartCoroutine(delayLvl1());
+        //SceneManager.LoadScene("Lvl1_Mines");
+        //GameManager.Instance.level = 1;
+        //GameManager.Instance.saveToJson();
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void mainMenu()
     {
-        //StartCoroutine (delayMainMenuScreen());
+        StartCoroutine (delayMainMenuScreen());
         //MusicManager.Instance.PlayBackgroundMusic(AppSounds.MAIN_MENU_MUSIC);
-        SceneManager.LoadScene("MainMenu");
-        Cursor.lockState = CursorLockMode.Confined;
+        //SceneManager.LoadScene("MainMenu");
+        //Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void exitGame()
     {
-        //StartCoroutine(delayExit());
+        StartCoroutine(delayExit());
         //MusicManager.Instance.StopBackgroundMusic();
-        Application.Quit();
+        //Application.Quit();
 
     }
 
     IEnumerator delayLvl1()
     {
-        //audioSource.PlayOneShot(button);
-        //yield return new WaitForSecondsRealtime(button.length);
-        yield return new WaitForSeconds(2.0f);
+        fadeScreen.FadeOut();
+
+        yield return new WaitForSecondsRealtime(fadeScreen.fadeDuration);
+
         SceneManager.LoadScene("Lvl1_Mines");
-        Cursor.lockState = CursorLockMode.Confined;
+        GameManager.Instance.level = 1;
+        GameManager.Instance.saveToJson();
+        Cursor.lockState = CursorLockMode.Locked;
+        if (GameObject.FindWithTag("faderScreen") != null)
+            fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
     }
 
     IEnumerator delayMainMenuScreen()
     {
-        //audioSource.PlayOneShot(button);
-        //yield return new WaitForSecondsRealtime(button.length);
-        yield return new WaitForSeconds(2.0f);
+        fadeScreen.FadeOut();
+        
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);
+
         SceneManager.LoadScene("MainMenu");
         Cursor.lockState = CursorLockMode.Confined;
+        if (GameObject.FindWithTag("faderScreen") != null)
+            fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
     }
 
     IEnumerator delayExit()
     {
-        //audioSource.PlayOneShot(button);
-        //yield return new WaitForSeconds(button.length);
-        yield return new WaitForSeconds(2.0f);
+        fadeScreen.FadeOut();
+
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);
+
         Application.Quit();
     }
 }

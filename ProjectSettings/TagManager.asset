@@ -15,6 +15,7 @@ TagManager:
   - Tape
   - TNT
   - Lever
+  - faderScreen
   layers:
   - Default
   - TransparentFX
