@@ -12,9 +12,9 @@ public class Keypad : MonoBehaviour
     [SerializeField]
     private LockerDoor lockerDoor;
     [SerializeField]
-    private GameObject pokeInteractor1;
+    private GameObject pokeInteractorLeft;
     [SerializeField]
-    private GameObject pokeInteractor2;
+    private GameObject pokeInteractorRight;
     [SerializeField]
     private GameObject shovel;
     [SerializeField]
@@ -30,12 +30,20 @@ public class Keypad : MonoBehaviour
     private bool canType;
     private bool done;
 
+    private Vector3 leftControllerPos;
+    private Vector3 rightControllerPos;
+    private Vector3 keypadPos;
+    private float distance;
+
     void Start()
     {
         numMaxDigitos = 4;
         actualText = "";
         canType = true;
         done = false;
+
+        keypadPos = this.gameObject.GetComponent<Transform>().position;
+        distance = 0.5f;
     }
 
     // Update is called once per frame
@@ -46,6 +54,38 @@ public class Keypad : MonoBehaviour
            // Debug.Log("No se puede escribir m?as");
             canType = false;
         }
+
+        //done nos indica si hemos abierto la taquilla o no (hemos introducido el código correcto)
+        if (!done)
+        {
+            leftControllerPos = leftControllerCollider.gameObject.GetComponent<Transform>().position;
+            rightControllerPos = rightControllerCollider.gameObject.GetComponent<Transform>().position;
+            //cojo el transform del keypad y el transform de cada una de las manos
+            //mano izquierda
+            if (Vector3.Distance(keypadPos, leftControllerPos) > distance)
+            {
+                pokeInteractorLeft.SetActive(false);
+                leftControllerCollider.enabled = true;
+            }
+            else
+            {
+                pokeInteractorLeft.SetActive(true);
+                leftControllerCollider.enabled = false;
+            }
+
+            //mano derecha
+            if (Vector3.Distance(keypadPos, rightControllerPos) > distance)
+            {
+                pokeInteractorRight.SetActive(false);
+                rightControllerCollider.enabled = true;
+            }
+            else
+            {
+                pokeInteractorRight.SetActive(true);
+                rightControllerCollider.enabled = false;
+            }
+        }
+        
 
     }
 
@@ -77,9 +117,9 @@ public class Keypad : MonoBehaviour
             done = true;
 
             lockerDoor.OpenDoor();
-            keypadCollider.enabled = false;
-            pokeInteractor1.SetActive(false);
-            pokeInteractor2.SetActive(false);
+           // keypadCollider.enabled = false;
+            pokeInteractorLeft.SetActive(false);
+            pokeInteractorRight.SetActive(false);
             shovel.SetActive(true);
             leftControllerCollider.enabled = true;
             rightControllerCollider.enabled = true;
@@ -91,4 +131,11 @@ public class Keypad : MonoBehaviour
             textGlass.text = actualText;
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(this.gameObject.transform.position, distance);
+    }
+
 }

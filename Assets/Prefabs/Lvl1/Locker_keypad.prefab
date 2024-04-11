@@ -2696,8 +2696,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textGlass: {fileID: 5593054827471790442}
   lockerDoor: {fileID: 8783815684157317015}
-  pokeInteractor1: {fileID: 0}
-  pokeInteractor2: {fileID: 0}
+  pokeInteractorLeft: {fileID: 0}
+  pokeInteractorRight: {fileID: 0}
+  shovel: {fileID: 0}
   leftControllerCollider: {fileID: 0}
   rightControllerCollider: {fileID: 0}
   keypadCollider: {fileID: 2342682301577643456}
@@ -4729,7 +4730,6 @@ GameObject:
   - component: {fileID: 608280821136327920}
   - component: {fileID: 3170025644152226157}
   - component: {fileID: 2342682301577643456}
-  - component: {fileID: 9045825829604709791}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -4823,20 +4823,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.356316, y: 18.471403, z: 4.4271197}
   m_Center: {x: -1.6818655, y: -1.8551348, z: 2.1378775}
---- !u!114 &9045825829604709791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8483438595504386089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe83cd2c12993c042a43e6de68e71e9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pokeInteractor1: {fileID: 0}
-  pokeInteractor2: {fileID: 0}
 --- !u!1 &8483795926496536244
 GameObject:
   m_ObjectHideFlags: 0

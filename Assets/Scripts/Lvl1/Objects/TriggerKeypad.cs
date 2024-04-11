@@ -16,6 +16,7 @@ public class TriggerKeypad : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Trigger Enter Taquilla");
             pokeInteractor1.SetActive(true);
             pokeInteractor2.SetActive(true);
             //controllerCollider.enabled = false;
@@ -27,6 +28,7 @@ public class TriggerKeypad : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Trigger Exit Taquilla");
             pokeInteractor1.SetActive(false);
             pokeInteractor2.SetActive(false);
             //controllerCollider.enabled = true;
