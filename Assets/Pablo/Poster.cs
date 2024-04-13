@@ -50,4 +50,32 @@ public class Poster : MonoBehaviour
     {
         GameManager.SceneChangerInstance.lvl1();
     }
+
+    public void goToLvl2()
+    {
+        GameManager.SceneChangerInstance.lvl1();
+    }
+
+    public void goToLvl3()
+    {
+        GameManager.SceneChangerInstance.lvl1();
+    }
+
+    public void goToLvl()
+    {
+        if(GameManager.LastSceneDataInstance.lastLevel == 2)
+        {
+            goToLvl2();
+        }
+
+        else if(GameManager.LastSceneDataInstance.lastLevel == 3)
+        {
+            goToLvl3();
+        }
+
+        else
+        {
+            goToLvl1();
+        }
+    }
 }
