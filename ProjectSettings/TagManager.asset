@@ -16,6 +16,7 @@ TagManager:
   - TNT
   - Lever
   - faderScreen
+  - Pawn
   layers:
   - Default
   - TransparentFX
