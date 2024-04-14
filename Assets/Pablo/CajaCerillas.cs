@@ -23,6 +23,9 @@ public class CajaCerillas : MonoBehaviour
     public Collider leftHand;
     public Collider rightHand;
 
+    public bool resetCerilla = false;
+    public float timeToReset = 2.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +35,18 @@ public class CajaCerillas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //if(resetCerilla && timeToReset<=2.5f) 
+        //{
+        //    if(timeToReset<2.5f)
+        //    {
+        //        timeToReset += Time.deltaTime;
+        //    }
+        //    else
+        //    {
+        //        resetCerilla = false;
+        //        timeToReset = 0;
+        //    }
+        //}
     }
 
     public void isGrabbedTrue()
@@ -92,20 +106,22 @@ public class CajaCerillas : MonoBehaviour
         //    Debug.Log("HOLAAA2");
         //}
 
-        if ( isGrabbedRightHand && other.gameObject.tag == "LeftHandTriggerCollider" && grabButtonLeftHand.action.WasPressedThisFrame())
+        if ( isGrabbedRightHand && other.gameObject.tag == "LeftHandTriggerCollider" && grabButtonLeftHand.action.IsPressed() && !resetCerilla)
         {
             GameObject newCerilla = Instantiate(cerillaPrefab, new Vector3(spawnCerillaLeftHand.position.x, spawnCerillaLeftHand.position.y+0.1f, spawnCerillaLeftHand.position.z) , Quaternion.identity);
             //Debug.Log("ENTRO_MANO_DCHA");
             //other.gameObject.transform.position = attachPoint.position;
+            resetCerilla = true;
             newCerilla.GetComponent<Match>().deactivateGravity();
-            StartCoroutine(gravityTimer(newCerilla));
+            StartCoroutine(gravityTimer(newCerilla));    
         }
 
-        if (isGrabbedLeftHand && other.gameObject.tag == "RightHandTriggerCollider" && grabButtonRightHand.action.WasPressedThisFrame())
+        if (isGrabbedLeftHand && other.gameObject.tag == "RightHandTriggerCollider" && grabButtonRightHand.action.IsPressed() && !resetCerilla)
         {
             GameObject newCerilla = Instantiate(cerillaPrefab, new Vector3(spawnCerillaRightHand.position.x, spawnCerillaRightHand.position.y+0.1f, spawnCerillaRightHand.position.z) , Quaternion.identity);
             //other.gameObject.transform.position = attachPoint.position;
             //Debug.Log("ENTRO_MANO_IZQDA");
+            resetCerilla = true;
             newCerilla.GetComponent<Match>().deactivateGravity();
             StartCoroutine(gravityTimer(newCerilla));
         }
@@ -115,5 +131,12 @@ public class CajaCerillas : MonoBehaviour
     {
         yield return new WaitForSeconds(5.0f);
         cerilla.GetComponent<Rigidbody>().isKinematic = false;
+        StartCoroutine(resetCerillaFunc());
+    }
+
+    IEnumerator resetCerillaFunc()
+    {
+        yield return new WaitForSeconds(timeToReset);
+        resetCerilla = false;
     }
 }
