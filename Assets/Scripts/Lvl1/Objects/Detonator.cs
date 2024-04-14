@@ -10,6 +10,13 @@ public class Detonator : MonoBehaviour
     private Tape tape;
     [SerializeField]
     private GameObject rocks;
+    [SerializeField]
+    private GameObject explosion;
+
+    private void Start()
+    {
+        explosion.SetActive(false);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +24,7 @@ public class Detonator : MonoBehaviour
         {
             rocks.SetActive(false);
             Debug.Log("Exploooooooooooooooooooosion");
+            explosion.SetActive(true);
         }
     }
 }
