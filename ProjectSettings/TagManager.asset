@@ -17,6 +17,10 @@ TagManager:
   - Lever
   - faderScreen
   - Pawn
+  - RedFlower
+  - BlueFlower
+  - OrangeFlower
+  - YellowFlower
   layers:
   - Default
   - TransparentFX
