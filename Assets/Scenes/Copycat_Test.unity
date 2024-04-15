@@ -812,7 +812,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 16
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -5202,7 +5202,7 @@ GameObject:
   - component: {fileID: 8809400727765434569}
   - component: {fileID: 8809400727765434571}
   - component: {fileID: 8809400727765434570}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: OrangeFlowerVase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5223,7 +5223,7 @@ GameObject:
   - component: {fileID: 8304877261074532402}
   - component: {fileID: 8304877261074532401}
   - component: {fileID: 8304877261074532400}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: YellowFlower
   m_TagString: YellowFlower
   m_Icon: {fileID: 0}
@@ -5475,7 +5475,7 @@ GameObject:
   - component: {fileID: 2897436600248486765}
   - component: {fileID: 2897436600248486764}
   - component: {fileID: 2897436600248486763}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RedFlower
   m_TagString: RedFlower
   m_Icon: {fileID: 0}
@@ -5521,7 +5521,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 16
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -5704,7 +5704,7 @@ GameObject:
   - component: {fileID: 8707560399720287608}
   - component: {fileID: 8707560399720287607}
   - component: {fileID: 8707560399720287609}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RedFlowerVase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6148,7 +6148,7 @@ GameObject:
   - component: {fileID: 3457045059465071387}
   - component: {fileID: 3457045059465071386}
   - component: {fileID: 3457045059465071385}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BlueFlower
   m_TagString: BlueFlower
   m_Icon: {fileID: 0}
@@ -6173,7 +6173,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 16
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -6711,7 +6711,7 @@ GameObject:
   - component: {fileID: 3894093955758207003}
   - component: {fileID: 3894093955758207002}
   - component: {fileID: 3894093955758207004}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: YellowFlowerVase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6735,7 +6735,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 16
   m_AttachTransform: {fileID: 1369184147}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -9076,7 +9076,7 @@ GameObject:
   - component: {fileID: 7212236712514553125}
   - component: {fileID: 7212236712514553126}
   - component: {fileID: 7212236712514553124}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BlueFlowerVase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9121,7 +9121,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 16
   m_AttachTransform: {fileID: 295097948}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -9277,7 +9277,7 @@ GameObject:
   - component: {fileID: 563490064}
   - component: {fileID: 563490063}
   - component: {fileID: 563490068}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: orangeFlower
   m_TagString: OrangeFlower
   m_Icon: {fileID: 0}
@@ -9916,7 +9916,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 16
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -10240,7 +10240,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 16
   m_AttachTransform: {fileID: 586851622}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
@@ -10470,7 +10470,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 16
   m_AttachTransform: {fileID: 1078039038}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1

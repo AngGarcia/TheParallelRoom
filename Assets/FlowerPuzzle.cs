@@ -35,6 +35,12 @@ public class FlowerPuzzle : MonoBehaviour
 
     public void winPuzzle()
     {
+        StartCoroutine(win());
+    }
+
+    IEnumerator win()
+    {
+        yield return new WaitForSeconds(1.0f);
         Debug.Log("FLOWER PUZZLE PASSED");
         puzzlePassed = true;
         blueFlower.GetComponent<XRGrabInteractable>().enabled = false;
