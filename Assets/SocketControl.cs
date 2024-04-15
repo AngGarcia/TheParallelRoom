@@ -36,7 +36,7 @@ public class SocketControl : MonoBehaviour
 
     IEnumerator resetSocket(GameObject item)
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         puzzle.losePuzzle();
         item.GetComponent<Rigidbody>().isKinematic = false;
         socket.socketActive = true;

@@ -8,6 +8,9 @@ public class chessPuzzle : MonoBehaviour
     public GameObject pawn;
     private Transform respawnPosition;
     public Vector3 pawnPosition;
+
+    public GameObject socket1;
+    public GameObject socket2;
     //public float addToRes = -0.1f;
 
     //0=NOTHING
@@ -18,7 +21,7 @@ public class chessPuzzle : MonoBehaviour
     void Start()
     {
         respawnPosition = pawn.transform;
-        pawnPosition = respawnPosition.position;
+        //pawnPosition = respawnPosition.position;
     }
 
     // Update is called once per frame
@@ -46,6 +49,8 @@ public class chessPuzzle : MonoBehaviour
         puzzlePassed = true;
         pawn.GetComponent<XRGrabInteractable>().enabled = false;
         //Deshabilitar sockets?
+        socket1.GetComponent<XRSocketInteractor>().enabled = false;
+        socket2.GetComponent<XRSocketInteractor>().enabled = false;
     }
 
 }
