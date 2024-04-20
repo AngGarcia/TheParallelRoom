@@ -3,7 +3,37 @@ guid: eb5e91003fbc1794b9f9c4ea093307f0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 40c7ea18ae6640448a4f67a701c1b8a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 2475a74c990db3145991be5fe6841075, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Screenshot (506)
+    second: {fileID: 2100000, guid: 174ac562d3b84bc45a36cc66b82cf565, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TexturesCom_DecalsLeaking0350_2_masked_S
+    second: {fileID: 2100000, guid: c882f5ce081990c42a7addf9843b4302, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood Frame
+    second: {fileID: 2100000, guid: d8a9043939c426e4f83f492b4fd7e464, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood Frame ( Dark )
+    second: {fileID: 2100000, guid: c594f53cc23c455498a305df4379c20e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
