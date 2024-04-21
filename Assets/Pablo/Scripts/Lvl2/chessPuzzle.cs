@@ -30,18 +30,36 @@ public class chessPuzzle : MonoBehaviour
 
     }
 
-    private IEnumerator resetPawnPosition()
+    private IEnumerator resetPawnPosition(float time)
     {
         puzzlePassed = false;
         yield return new WaitForSeconds(0.25f);
         //pawn.transform.position = new Vector3(pawn.transform.position.x + addToRes, pawn.transform.position.y, pawn.transform.position.z);
-        pawn.transform.position = pawnPosition;
+        //pawn.transform.position = pawnPosition;
+        StartCoroutine(movePawn(time));
+        
+    }
+
+    IEnumerator movePawn(float time)
+    {
+        Vector3 startingPos = pawn.transform.position;
+        Vector3 finalPos = pawnPosition;
+
+        float elapsedTime = 0;
+
+        while (elapsedTime < time)
+        {
+            //Debug.Log("ENTO");
+            pawn.transform.position = Vector3.Lerp(startingPos, finalPos, (elapsedTime / time));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
     }
 
     public void losePuzzle()
     {
 
-        StartCoroutine(resetPawnPosition());
+        StartCoroutine(resetPawnPosition(2.0f));
     }
 
     public void winPuzzle()
