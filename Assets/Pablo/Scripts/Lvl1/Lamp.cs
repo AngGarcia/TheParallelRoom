@@ -29,5 +29,17 @@ public class Lamp : MonoBehaviour
             pointLightObj.SetActive(true);
             codigo.SetActive(true);
         }
+
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "BlowtorchFlame")
+        {
+            this.gameObject.GetComponent<MeshRenderer>().material = lightUpMat;
+            pointLightObj.SetActive(true);
+            codigo.SetActive(true);
+        }
     }
 }
