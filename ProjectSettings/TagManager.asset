@@ -21,6 +21,7 @@ TagManager:
   - BlueFlower
   - OrangeFlower
   - YellowFlower
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -35,7 +36,7 @@ TagManager:
   - Pieza
   - LockerDoor
   - Flowers
-  - 
+  - CrowbarSocket
   - 
   - 
   - 
