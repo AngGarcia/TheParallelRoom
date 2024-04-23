@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7255466116736006188}
   - component: {fileID: 4512561792375238730}
   - component: {fileID: 27428750612350368}
+  - component: {fileID: 8448572699015230486}
   m_Layer: 0
   m_Name: Crate_v2
   m_TagString: Untagged
@@ -28,8 +29,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.794, y: 0.134, z: -2.884}
-  m_LocalScale: {x: 25, y: 25, z: 25}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 35, y: 35, z: 35}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1248805034917445710}
   - {fileID: 5465522250708665133}
@@ -76,6 +77,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fire: {fileID: 4813548502130107927}
+--- !u!114 &8448572699015230486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890540890276191452}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bc41110e178904abcc2b51d48f2f59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crowbar: {fileID: 0}
+  animatorCrowbar: {fileID: 0}
 --- !u!1 &2690437882710838069
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +349,6 @@ GameObject:
   - component: {fileID: 3449929635942699836}
   - component: {fileID: 3845301689760142975}
   - component: {fileID: 6049047443595889960}
-  - component: {fileID: 1624283043675725650}
   m_Layer: 13
   m_Name: openSocket
   m_TagString: Untagged
@@ -419,13 +433,25 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1624283043675725650}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UseCrowbarCrate, Assembly-CSharp
         m_MethodName: openCrateAnim
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 8037747016197037583}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UseCrowbarCrate, Assembly-CSharp
+        m_MethodName: setSocket
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6743988888829381227}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -459,21 +485,6 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!114 &1624283043675725650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6743988888829381227}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47bc41110e178904abcc2b51d48f2f59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crowbar: {fileID: 0}
-  tapaCaja: {fileID: 8037747016197037583}
-  animatorCrowbar: {fileID: 0}
 --- !u!1 &8037747016197037583
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,9 +585,9 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.026113844, y: 0.024997186, z: 0.0025502017}
   m_Center: {x: -0.0005946016, y: -0.00035807135, z: 0.00076983037}

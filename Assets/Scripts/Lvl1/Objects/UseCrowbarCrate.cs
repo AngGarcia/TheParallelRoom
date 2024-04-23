@@ -9,17 +9,31 @@ public class UseCrowbarCrate : MonoBehaviour
     [SerializeField]
     private GameObject crowbar;
     [SerializeField]
-    private GameObject tapaCaja;
-    [SerializeField]
     private Animator animatorCrowbar;
 
-    public void openCrateAnim()
+    private GameObject tapaCaja;
+    private GameObject socketCaja;
+
+    private float fuerzaInicial = 10f; 
+    private Vector3 direccionImpulso = Vector3.up; 
+
+
+    public void openCrateAnim(GameObject tapa)
     {
+        tapaCaja = tapa;
         animatorCrowbar.SetInteger("openCrate", 1);
+    }
+
+    public void setSocket(GameObject socket)
+    {
+        socketCaja = socket;
     }
 
     public void abrirTapa()
     {
-        tapaCaja.SetActive(false);
+        socketCaja.SetActive(false);
+        animatorCrowbar.SetInteger("openCrate", 0);
+        tapaCaja.AddComponent<Rigidbody>();
+        tapaCaja.GetComponent<Rigidbody>().AddForce(direccionImpulso * fuerzaInicial, ForceMode.Impulse);
     }
 }
