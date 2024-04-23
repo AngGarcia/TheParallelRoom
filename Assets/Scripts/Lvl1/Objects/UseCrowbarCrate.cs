@@ -9,27 +9,17 @@ public class UseCrowbarCrate : MonoBehaviour
     [SerializeField]
     private GameObject crowbar;
     [SerializeField]
-    private GameObject caja;
+    private GameObject tapaCaja;
+    [SerializeField]
+    private Animator animatorCrowbar;
 
-    private bool estaEnganchada = false;
-
-    // Update is called once per frame
-    void Update()
+    public void openCrateAnim()
     {
-        
+        animatorCrowbar.SetInteger("openCrate", 1);
     }
 
-    public void joinCrowbar()
+    public void abrirTapa()
     {
-        Rigidbody cajaRigidBody = caja.GetComponent<Rigidbody>();
-        if (cajaRigidBody != null && !estaEnganchada)
-        {
-            // Añade un FixedJoint para unir la palanca a la caja
-            FixedJoint joint = crowbar.AddComponent<FixedJoint>();
-            joint.connectedBody = cajaRigidBody;
-
-            estaEnganchada = true;
-
-        }
+        tapaCaja.SetActive(false);
     }
 }
