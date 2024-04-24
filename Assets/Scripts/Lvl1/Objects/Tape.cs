@@ -41,6 +41,8 @@ public class Tape : MonoBehaviour
                 brokenCable2.SetActive(false);
                 numFixed++;
             }
+
+            this.gameObject.GetComponent<AudioSource>().Play(0);
         }
     }
 

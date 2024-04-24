@@ -23,6 +23,8 @@ public class Keypad : MonoBehaviour
     private BoxCollider rightControllerCollider;
     [SerializeField]
     private BoxCollider keypadCollider;
+    [SerializeField]
+    private AudioClip[] audioClips;
 
     private string actualCode = "4598";
     private int numMaxDigitos;
@@ -93,6 +95,8 @@ public class Keypad : MonoBehaviour
     {
         if (canType && !done)
         {
+            this.gameObject.GetComponent<AudioSource>().clip = audioClips[0];
+            this.gameObject.GetComponent<AudioSource>().Play(0);
             actualText = actualText + numToType.ToString();
             textGlass.text = actualText;
             Debug.Log(numToType + " tipeado");
@@ -103,6 +107,8 @@ public class Keypad : MonoBehaviour
     {
         if (!done)
         {
+            this.gameObject.GetComponent<AudioSource>().clip = audioClips[0];
+            this.gameObject.GetComponent<AudioSource>().Play(0);
             canType = true;
             actualText = "";
             textGlass.text = actualText;
@@ -116,6 +122,9 @@ public class Keypad : MonoBehaviour
             canType = false;
             done = true;
 
+            this.gameObject.GetComponent<AudioSource>().clip = audioClips[1];
+            this.gameObject.GetComponent<AudioSource>().Play(0);
+
             lockerDoor.OpenDoor();
            // keypadCollider.enabled = false;
             pokeInteractorLeft.SetActive(false);
@@ -126,7 +135,8 @@ public class Keypad : MonoBehaviour
         }
         else
         {
-            //poner sfx de 'WROOONG'
+            this.gameObject.GetComponent<AudioSource>().clip = audioClips[2];
+            this.gameObject.GetComponent<AudioSource>().Play(0);
             actualText = "";
             textGlass.text = actualText;
         }

@@ -24,7 +24,7 @@ public class ChangeGravel : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Shovel"))
         {
-
+            this.gameObject.GetComponent<AudioSource>().Play(0);
             this.gameObject.GetComponent<MeshFilter>().mesh = secondMesh;
             tnt.SetActive(true);
             // this.gameObject.GetComponent<MeshCollider>().isTrigger = false;
