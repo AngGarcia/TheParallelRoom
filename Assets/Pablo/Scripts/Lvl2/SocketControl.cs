@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class SocketControl : MonoBehaviour
 {
-    public XRSocketInteractor socket;
+    private XRSocketInteractor socket;
     public chessPuzzle puzzle;
     public int squareType;
 

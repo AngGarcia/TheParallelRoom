@@ -222,7 +222,7 @@ Transform:
   - {fileID: 2015441595810950962}
   - {fileID: 7593452937764172889}
   - {fileID: 2447519583616504044}
-  - {fileID: 7779767929556631402}
+  - {fileID: 8735582701165941048}
   - {fileID: 2701198498825876248}
   - {fileID: 8274082558567629326}
   - {fileID: 229636350470148157}
@@ -457,13 +457,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622600604627473543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.707283, y: 0.00033265352, z: -0.00042173266, w: 0.7069304}
-  m_LocalPosition: {x: 0.41999415, y: -0.021822453, z: 0.1300001}
+  m_LocalRotation: {x: -0.70728296, y: 0.00033262363, z: -0.00042173258, w: 0.70693034}
+  m_LocalPosition: {x: 0.4200165, y: -0.02182722, z: 0.12996241}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5275936553570648126}
-  m_Father: {fileID: 2102775740027742580}
+  m_Father: {fileID: 8735582701165941048}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4003951657716342024
 MeshFilter:
@@ -2236,6 +2236,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 17.780006, y: 17.780006, z: 1.4605019}
   m_Center: {x: -0.0000038146973, y: -0.24250036, z: 0.7302499}
+--- !u!1 &5891734597376572428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8735582701165941048}
+  m_Layer: 0
+  m_Name: Pawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8735582701165941048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5891734597376572428}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7779767929556631402}
+  m_Father: {fileID: 2102775740027742580}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5938846186330132574
 GameObject:
   m_ObjectHideFlags: 0
