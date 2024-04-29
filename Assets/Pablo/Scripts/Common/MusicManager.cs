@@ -35,6 +35,36 @@ public class MusicManager : PersistentSingleton<MusicManager>
         }
     }
 
+    public float volumeSfx;
+
+    public float SfxVolume
+    {
+        get
+        {
+            return volumeSfx;
+        }
+        set
+        {
+            value = Mathf.Clamp01(value);
+            //PlayerPrefs.SetFloat(AppPlayerPrefKeys.SFX_VOLUME, value);
+            volumeSfx = value;
+        }
+    }
+
+    public float SfxVolumeSave
+    {
+        get
+        {
+            return volumeSfx;
+        }
+        set
+        {
+            value = Mathf.Clamp01(value);
+            m_sfxMusic.volume = volumeSfx;
+            //PlayerPrefs.SetFloat(AppPlayerPrefKeys.SFX_VOLUME, value);
+            volumeSfx = value;
+        }
+    }
 
     public override void Awake()
     {
@@ -64,6 +94,7 @@ public class MusicManager : PersistentSingleton<MusicManager>
     private void Start()
     {
         MusicVolume = GameManager.CommonVariablesInstance.volumeMusic;
+        SfxVolume = GameManager.CommonVariablesInstance.volumeSfx;
     }
 
     public void PlayBackgroundMusic(string audioName)
@@ -82,6 +113,7 @@ public class MusicManager : PersistentSingleton<MusicManager>
         if (m_sfxMusic.clip = m_soundFXDictionary[audioName])
         {
             m_sfxMusic.clip = m_soundFXDictionary[audioName];
+            m_sfxMusic.volume = SfxVolume;
             m_sfxMusic.Play();
         }
     }
