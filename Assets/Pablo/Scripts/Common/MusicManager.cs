@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MusicManager : PersistentSingleton<MusicManager>
 {
+    [Range (0,1)]public float modifier=0.5f;
     public float volumeMusic;
 
     public float MusicVolume
@@ -41,7 +42,7 @@ public class MusicManager : PersistentSingleton<MusicManager>
     {
         get
         {
-            return volumeSfx;
+            return volumeSfx * modifier;
         }
         set
         {
@@ -66,12 +67,28 @@ public class MusicManager : PersistentSingleton<MusicManager>
         }
     }
 
+    public float BackgroundSfxVolumeSave
+    {
+        get
+        {
+            return volumeSfx*modifier;
+        }
+        set
+        {
+            value = Mathf.Clamp01(value);
+            m_backgroundSfxMusic.volume = volumeSfx*modifier;
+            //PlayerPrefs.SetFloat(AppPlayerPrefKeys.SFX_VOLUME, value);
+            volumeSfx = value;
+        }
+    }
+
     public override void Awake()
     {
         base.Awake();
 
         m_backgroundMusic = CreateAudioSource("Music", true);
         m_sfxMusic = CreateAudioSource("Sfx", false);
+        m_backgroundSfxMusic = CreateAudioSource("Background_Sfx", false);
 
         m_soundMusicDictionary = new Dictionary<string, AudioClip>();
         m_soundFXDictionary = new Dictionary<string, AudioClip>();
@@ -118,6 +135,16 @@ public class MusicManager : PersistentSingleton<MusicManager>
         }
     }
 
+    public void PlayBackgroundSound(string audioName)
+    {
+        if (m_backgroundSfxMusic.clip = m_soundFXDictionary[audioName])
+        {
+            m_backgroundSfxMusic.clip = m_soundFXDictionary[audioName];
+            m_backgroundSfxMusic.volume = SfxVolume;
+            m_backgroundSfxMusic.Play();
+        }
+    }
+
     public void StopBackgroundMusic()
     {
         if (m_backgroundMusic != null)
@@ -147,4 +174,5 @@ public class MusicManager : PersistentSingleton<MusicManager>
 
     private AudioSource m_backgroundMusic;
     private AudioSource m_sfxMusic;
+    private AudioSource m_backgroundSfxMusic;
 }
