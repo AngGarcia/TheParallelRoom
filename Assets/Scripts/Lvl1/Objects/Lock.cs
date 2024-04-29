@@ -7,7 +7,9 @@ public class Lock : MonoBehaviour
     [SerializeField]
     private KeyLocker locker;
 
+    [SerializeField]
     private Rigidbody rb;
+
     private BoxCollider bc;
 
     private void Start()
@@ -16,15 +18,12 @@ public class Lock : MonoBehaviour
         bc = GetComponent<BoxCollider>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void abrirPuerta()
     {
         Debug.Log("TaquillaAbierta");
-        if (other.gameObject.CompareTag("Key"))
-        {
-            locker.setOpen();
-            rb.isKinematic = false;
-            bc.isTrigger = false;
-            this.gameObject.GetComponent<AudioSource>().Play(0);
-        }
+        locker.setOpen();
+        rb.isKinematic = false;
+        bc.isTrigger = false;
+        this.gameObject.GetComponent<AudioSource>().Play(0);
     }
 }

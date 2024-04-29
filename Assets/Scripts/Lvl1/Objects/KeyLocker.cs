@@ -5,6 +5,8 @@ using UnityEngine;
 public class KeyLocker : MonoBehaviour
 {
     private ConfigurableJoint joint;
+    [SerializeField]
+    private GameObject Lock;
 
     void Start()
     {
@@ -15,5 +17,7 @@ public class KeyLocker : MonoBehaviour
     public void setOpen()
     {
         joint.angularXMotion = ConfigurableJointMotion.Limited;
+        Lock.GetComponent<Rigidbody>().isKinematic = false;
+        Lock.GetComponent<BoxCollider>().isTrigger = false;
     }
 }

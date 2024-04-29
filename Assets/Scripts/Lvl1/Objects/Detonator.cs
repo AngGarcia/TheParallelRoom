@@ -11,6 +11,8 @@ public class Detonator : MonoBehaviour
     [SerializeField]
     private GameObject rocks;
     [SerializeField]
+    private GameObject socket;
+    [SerializeField]
     private GameObject explosion;
 
     private void Start()
@@ -23,6 +25,7 @@ public class Detonator : MonoBehaviour
         if(other.tag == "Lever" && DinamiteSocket.getNumTnt() && tape.isCableFixed())
         {
             rocks.SetActive(false);
+            socket.SetActive(false);
             Debug.Log("Exploooooooooooooooooooosion");
             explosion.SetActive(true);
         }
