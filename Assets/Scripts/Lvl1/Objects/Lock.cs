@@ -24,6 +24,7 @@ public class Lock : MonoBehaviour
         locker.setOpen();
         rb.isKinematic = false;
         bc.isTrigger = false;
-        this.gameObject.GetComponent<AudioSource>().Play(0);
+        //this.gameObject.GetComponent<AudioSource>().Play(0);
+        MusicManager.Instance.PlaySound(AppSounds.INSERT_KEY);
     }
 }

@@ -27,7 +27,8 @@ public class UseCrowbarCrate : MonoBehaviour
         audioSource.clip = openCrateSFX;
         tapaCaja = tapa;
         animatorCrowbar.SetInteger("openCrate", 1);
-        audioSource.Play(0);
+        //audioSource.Play(0);
+        MusicManager.Instance.PlaySound(AppSounds.OPEN_CRATE);
     }
 
     public void setSocket(GameObject socket)

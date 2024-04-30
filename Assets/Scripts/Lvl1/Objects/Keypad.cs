@@ -95,8 +95,9 @@ public class Keypad : MonoBehaviour
     {
         if (canType && !done)
         {
-            this.gameObject.GetComponent<AudioSource>().clip = audioClips[0];
-            this.gameObject.GetComponent<AudioSource>().Play(0);
+            //this.gameObject.GetComponent<AudioSource>().clip = audioClips[0];
+            //this.gameObject.GetComponent<AudioSource>().Play(0);
+            MusicManager.Instance.PlaySound(AppSounds.KEYPAD_BUTTON);
             actualText = actualText + numToType.ToString();
             textGlass.text = actualText;
             Debug.Log(numToType + " tipeado");
@@ -107,8 +108,9 @@ public class Keypad : MonoBehaviour
     {
         if (!done)
         {
-            this.gameObject.GetComponent<AudioSource>().clip = audioClips[0];
-            this.gameObject.GetComponent<AudioSource>().Play(0);
+            //this.gameObject.GetComponent<AudioSource>().clip = audioClips[0];
+            //this.gameObject.GetComponent<AudioSource>().Play(0);
+            MusicManager.Instance.PlaySound(AppSounds.KEYPAD_BUTTON);
             canType = true;
             actualText = "";
             textGlass.text = actualText;
@@ -122,8 +124,9 @@ public class Keypad : MonoBehaviour
             canType = false;
             done = true;
 
-            this.gameObject.GetComponent<AudioSource>().clip = audioClips[1];
-            this.gameObject.GetComponent<AudioSource>().Play(0);
+            //this.gameObject.GetComponent<AudioSource>().clip = audioClips[1];
+            //this.gameObject.GetComponent<AudioSource>().Play(0);
+            MusicManager.Instance.PlaySound(AppSounds.KEYPAD_RIGHT);
 
             lockerDoor.OpenDoor();
            // keypadCollider.enabled = false;
@@ -135,8 +138,9 @@ public class Keypad : MonoBehaviour
         }
         else
         {
-            this.gameObject.GetComponent<AudioSource>().clip = audioClips[2];
-            this.gameObject.GetComponent<AudioSource>().Play(0);
+            //this.gameObject.GetComponent<AudioSource>().clip = audioClips[2];
+            //this.gameObject.GetComponent<AudioSource>().Play(0);
+            MusicManager.Instance.PlaySound(AppSounds.KEYPAD_WRONG);
             actualText = "";
             textGlass.text = actualText;
         }

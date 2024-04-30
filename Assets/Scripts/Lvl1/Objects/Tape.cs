@@ -42,7 +42,8 @@ public class Tape : MonoBehaviour
                 numFixed++;
             }
 
-            this.gameObject.GetComponent<AudioSource>().Play(0);
+            //this.gameObject.GetComponent<AudioSource>().Play(0);
+            MusicManager.Instance.PlaySound(AppSounds.DUCT_TAPE);
         }
     }
 
