@@ -14,7 +14,8 @@ public class ChangeGravel : MonoBehaviour
 
     void Start()
     {
-        tnt.SetActive(false);
+        if(tnt != null)
+            tnt.SetActive(false);
         this.gameObject.GetComponent<MeshFilter>().mesh = normalMesh;
         this.gameObject.GetComponent<MeshCollider>().isTrigger = true;
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
@@ -27,10 +28,11 @@ public class ChangeGravel : MonoBehaviour
             // this.gameObject.GetComponent<AudioSource>().Play(0);
             MusicManager.Instance.PlaySound(AppSounds.SHOVEL_DIG);
             this.gameObject.GetComponent<MeshFilter>().mesh = secondMesh;
-            tnt.SetActive(true);
             // this.gameObject.GetComponent<MeshCollider>().isTrigger = false;
             this.gameObject.GetComponent<MeshCollider>().enabled = false;
             this.gameObject.GetComponent<BoxCollider>().enabled = true;
+            if(tnt != null)
+                tnt.SetActive(true);
 
 
         }

@@ -7,7 +7,6 @@ public class Lock : MonoBehaviour
     [SerializeField]
     private KeyLocker locker;
 
-    [SerializeField]
     private Rigidbody rb;
 
     private BoxCollider bc;

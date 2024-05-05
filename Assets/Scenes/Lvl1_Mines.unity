@@ -709,6 +709,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 467191393510125982, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+      propertyPath: Lock
+      value: 
+      objectReference: {fileID: 2038654110}
     - target: {fileID: 1622370198994515733, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: m_Name
       value: MinesRoom
@@ -1131,6 +1135,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7255466116736006188, guid: de2a6fb1a2ff9b741ad22ad9a0da69f7, type: 3}
   m_PrefabInstance: {fileID: 1995434087}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2038654110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2715038765999772931, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
+  m_PrefabInstance: {fileID: 1224535787}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2040344318 stripped
 GameObject:
