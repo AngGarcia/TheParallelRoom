@@ -52,7 +52,7 @@ public class CheckPokeAreaAnim : MonoBehaviour
         {
             if (Vector3.Distance(buttonPos1, leftControllerPos) <= distance || Vector3.Distance(buttonPos2, leftControllerPos) <= distance)
             {
-                Debug.Log("ENTRO");
+                //Debug.Log("ENTRO");
                 checkGrabPressed.isInPokeArea = true;
                 animator.SetInteger("Hand", 2);
             }

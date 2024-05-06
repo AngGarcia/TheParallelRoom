@@ -11,6 +11,7 @@ public class AppPlayerPrefKeys
 public class AppPaths
 {
     public static readonly string PATH_RESOURCE_SFX = "Audio/SFX/";
+    public static readonly string PATH_RESOURCE_SFX_BACKGROUND = "Audio/SFX_Background/";
     public static readonly string PATH_RESOURCE_MUSIC = "Audio/Music/";
 }
 

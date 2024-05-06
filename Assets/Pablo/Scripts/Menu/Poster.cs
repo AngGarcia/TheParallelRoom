@@ -10,6 +10,8 @@ public class Poster : MonoBehaviour
     public Material poster2;
     public Material poster3;
 
+    private bool canChangeScene = true;
+
 
     private void Start()
     {
@@ -27,6 +29,8 @@ public class Poster : MonoBehaviour
         {
             poster.GetComponent<MeshRenderer>().material = poster3;
         }
+
+        canChangeScene = true;
     }
     //private void OnCollisionEnter(Collision collision)
     //{
@@ -62,20 +66,28 @@ public class Poster : MonoBehaviour
     }
 
     public void goToLvl()
-    {
-        if(GameManager.LastSceneDataInstance.lastLevel == 2)
+    { 
+        if (canChangeScene) 
         {
-            goToLvl2();
-        }
+            if (GameManager.LastSceneDataInstance.lastLevel == 2)
+            {
+                canChangeScene = false;
+                goToLvl2();
+                
+            }
 
-        else if(GameManager.LastSceneDataInstance.lastLevel == 3)
-        {
-            goToLvl3();
-        }
+            else if (GameManager.LastSceneDataInstance.lastLevel == 3)
+            {
+                canChangeScene = false;
+                goToLvl3();
+            }
 
-        else
-        {
-            goToLvl1();
+            else
+            {
+                canChangeScene = false;
+                goToLvl1();
+            }
         }
+        
     }
 }

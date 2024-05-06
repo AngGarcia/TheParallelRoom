@@ -20,6 +20,7 @@ public class GameMenuManager : MonoBehaviour
     public GameObject resetButton;
 
     public Slider m_musicSlider;
+    public Slider m_sfxSlider;
 
     public float maxPositionX = 3.3f;
     public float minPositionX = -3.3f;
@@ -41,6 +42,7 @@ public class GameMenuManager : MonoBehaviour
             if(!menu.activeSelf)
             {
                 m_musicSlider.value = GameManager.CommonVariablesInstance.volumeMusic;
+                m_sfxSlider.value = GameManager.CommonVariablesInstance.volumeSfx;
                 menu.SetActive(true);
                 RayInteractorObject.GetComponent<XRRayInteractor>().enabled = true;
                 DirectIntercatorObject.GetComponent<XRDirectInteractor>().enabled = false;
@@ -94,6 +96,9 @@ public class GameMenuManager : MonoBehaviour
                 mandoIzquierdo.GetComponent<XRDirectInteractor>().enabled = true;
                 MusicManager.Instance.MusicVolumeSave = m_musicSlider.value;
                 GameManager.CommonVariablesInstance.volumeMusic = m_musicSlider.value;
+                MusicManager.Instance.SfxVolumeSave = m_sfxSlider.value;
+                GameManager.CommonVariablesInstance.volumeSfx = m_sfxSlider.value;
+                MusicManager.Instance.BackgroundSfxVolumeSave = m_sfxSlider.value;
             }
             //menu.SetActive(!menu.activeSelf);
         }
@@ -109,6 +114,9 @@ public class GameMenuManager : MonoBehaviour
         mandoIzquierdo.GetComponent<XRDirectInteractor>().enabled = true;
         MusicManager.Instance.MusicVolumeSave = m_musicSlider.value;
         GameManager.CommonVariablesInstance.volumeMusic = m_musicSlider.value;
+        MusicManager.Instance.SfxVolumeSave = m_sfxSlider.value;
+        GameManager.CommonVariablesInstance.volumeSfx = m_sfxSlider.value;
+        MusicManager.Instance.BackgroundSfxVolumeSave = m_sfxSlider.value;
     }
 
     public void activateConfirmationCanvas()
@@ -119,6 +127,8 @@ public class GameMenuManager : MonoBehaviour
         mandoIzquierdo.GetComponent<XRDirectInteractor>().enabled = true;
         MusicManager.Instance.MusicVolumeSave = m_musicSlider.value;
         GameManager.CommonVariablesInstance.volumeMusic = m_musicSlider.value;
+        MusicManager.Instance.SfxVolumeSave = m_sfxSlider.value;
+        GameManager.CommonVariablesInstance.volumeSfx = m_sfxSlider.value;
 
 
         confirmationCanvas.SetActive(true);
@@ -134,6 +144,7 @@ public class GameMenuManager : MonoBehaviour
     {
         confirmationCanvas.SetActive(false);
         m_musicSlider.value = GameManager.CommonVariablesInstance.volumeMusic;
+        m_sfxSlider.value = GameManager.CommonVariablesInstance.volumeSfx;
         menu.SetActive(true);
         RayInteractorObject.GetComponent<XRRayInteractor>().enabled = true;
         DirectIntercatorObject.GetComponent<XRDirectInteractor>().enabled = false;
@@ -181,6 +192,13 @@ public class GameMenuManager : MonoBehaviour
     {
         MusicManager.Instance.MusicVolume = m_musicSlider.value;
         GameManager.CommonVariablesInstance.volumeMusic = m_musicSlider.value;
+    }
+
+    public void onSfxValueChanged()
+    {
+        MusicManager.Instance.SfxVolume = m_sfxSlider.value;
+        GameManager.CommonVariablesInstance.volumeSfx = m_sfxSlider.value;
+        MusicManager.Instance.BackgroundSfxVolume = m_sfxSlider.value;
     }
 
     public void onQuitToMenu()

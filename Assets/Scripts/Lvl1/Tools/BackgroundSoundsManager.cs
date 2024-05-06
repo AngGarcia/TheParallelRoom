@@ -16,10 +16,6 @@ public class BackgroundSoundsManager : MonoBehaviour
     [SerializeField]
     private AudioClip ambientMusic;
 
-    [SerializeField]
-    private AudioSource audioSourceSFX;
-    [SerializeField]
-    private AudioSource audioSourceMusic;
 
     private float delayTime = 30f;
     private float actualTime = 0f;
@@ -28,8 +24,6 @@ public class BackgroundSoundsManager : MonoBehaviour
     void Start()
     {
         //StartCoroutine(PlayAudioWithDelay());
-        audioSourceMusic.clip = ambientMusic;
-        audioSourceMusic.Play();
         MusicManager.Instance.PlayBackgroundMusic(AppSounds.LVL1_BACKGROUND_MUSIC);
     }
 
@@ -43,11 +37,11 @@ public class BackgroundSoundsManager : MonoBehaviour
 
             if (numAudio == 0)
             {
-                MusicManager.Instance.PlaySound(AppSounds.ROCKS_FALLING);
+                MusicManager.Instance.PlayBackgroundSound(AppSounds.ROCKS_FALLING);
             }
             else
             {
-                MusicManager.Instance.PlaySound(AppSounds.EXPLOSION);
+                MusicManager.Instance.PlayBackgroundSound(AppSounds.EXPLOSION);
             }
 
             actualTime = 0;

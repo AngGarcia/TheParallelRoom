@@ -58,7 +58,12 @@ public class GameManager : PersistentSingleton<GameManager>
     // Start is called before the first frame update
     void Start()
     {
-
+        MusicManager.Instance.MusicVolume = GameManager.CommonVariablesInstance.volumeMusic;
+        MusicManager.Instance.SfxVolume = GameManager.CommonVariablesInstance.volumeSfx;
+        MusicManager.Instance.BackgroundSfxVolume = MusicManager.Instance.SfxVolume;
+        MusicManager.Instance.MusicVolumeSave = GameManager.CommonVariablesInstance.volumeMusic;
+        MusicManager.Instance.SfxVolumeSave = GameManager.CommonVariablesInstance.volumeSfx;
+        MusicManager.Instance.BackgroundSfxVolumeSave = MusicManager.Instance.SfxVolume;
     }
 
     // Update is called once per frame

@@ -54,7 +54,11 @@ public class SceneChanger : MonoBehaviour
         GameManager.Instance.saveToJson();
         Cursor.lockState = CursorLockMode.Locked;
         if (GameObject.FindWithTag("faderScreen") != null)
+        {
             fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
+            Debug.Log("BUSCO FADER SCREEN");
+        }
+            
     }
 
     IEnumerator delayMainMenuScreen()

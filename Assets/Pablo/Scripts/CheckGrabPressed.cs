@@ -19,12 +19,12 @@ public class CheckGrabPressed : MonoBehaviour
     {
         if (grabButton.action.IsPressed() && !isInPokeArea)
         {
-            isGrabbing = true;
+            //isGrabbing = true;
             this.gameObject.GetComponent<Animator>().SetInteger("Hand", 1);
         }
         else if(!grabButton.action.IsPressed() && !isInPokeArea)
         {
-            isGrabbing = false;
+            //isGrabbing = false;
             this.gameObject.GetComponent<Animator>().SetInteger("Hand", 0);
         }
         

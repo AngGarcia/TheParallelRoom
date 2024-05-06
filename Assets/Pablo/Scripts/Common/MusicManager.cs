@@ -42,7 +42,7 @@ public class MusicManager : PersistentSingleton<MusicManager>
     {
         get
         {
-            return volumeSfx * modifier;
+            return volumeSfx;
         }
         set
         {
@@ -67,18 +67,33 @@ public class MusicManager : PersistentSingleton<MusicManager>
         }
     }
 
-    public float BackgroundSfxVolumeSave
+    public float volumeBackgroundSfx;
+    public float BackgroundSfxVolume
     {
         get
         {
-            return volumeSfx*modifier;
+            return volumeBackgroundSfx;
         }
         set
         {
             value = Mathf.Clamp01(value);
-            m_backgroundSfxMusic.volume = volumeSfx*modifier;
             //PlayerPrefs.SetFloat(AppPlayerPrefKeys.SFX_VOLUME, value);
-            volumeSfx = value;
+            volumeBackgroundSfx = value * modifier;
+        }
+    }
+    public float BackgroundSfxVolumeSave
+    {
+        get
+        {
+            return volumeBackgroundSfx;
+        }
+        set
+        {
+            value = Mathf.Clamp01(value);
+            volumeBackgroundSfx = value * modifier;
+            m_backgroundSfxMusic.volume = volumeBackgroundSfx;
+            //PlayerPrefs.SetFloat(AppPlayerPrefKeys.SFX_VOLUME, value);
+            
         }
     }
 
@@ -92,6 +107,7 @@ public class MusicManager : PersistentSingleton<MusicManager>
 
         m_soundMusicDictionary = new Dictionary<string, AudioClip>();
         m_soundFXDictionary = new Dictionary<string, AudioClip>();
+        m_soundFXBackgoundDictionary = new Dictionary<string, AudioClip>();
 
         AudioClip[] audioSfxVector = Resources.LoadAll<AudioClip>(AppPaths.PATH_RESOURCE_SFX);
 
@@ -106,12 +122,21 @@ public class MusicManager : PersistentSingleton<MusicManager>
         {
             m_soundMusicDictionary.Add(audioSfxVector[i].name, audioSfxVector[i]);
         }
+
+        audioSfxVector = Resources.LoadAll<AudioClip>(AppPaths.PATH_RESOURCE_SFX_BACKGROUND);
+
+        for (int i = 0; i < audioSfxVector.Length; i++)
+        {
+            m_soundFXBackgoundDictionary.Add(audioSfxVector[i].name, audioSfxVector[i]);
+        }
+
     }
 
     private void Start()
     {
         MusicVolume = GameManager.CommonVariablesInstance.volumeMusic;
         SfxVolume = GameManager.CommonVariablesInstance.volumeSfx;
+        BackgroundSfxVolume = SfxVolume;
     }
 
     public void PlayBackgroundMusic(string audioName)
@@ -137,10 +162,10 @@ public class MusicManager : PersistentSingleton<MusicManager>
 
     public void PlayBackgroundSound(string audioName)
     {
-        if (m_backgroundSfxMusic.clip = m_soundFXDictionary[audioName])
+        if (m_backgroundSfxMusic.clip = m_soundFXBackgoundDictionary[audioName])
         {
-            m_backgroundSfxMusic.clip = m_soundFXDictionary[audioName];
-            m_backgroundSfxMusic.volume = SfxVolume;
+            m_backgroundSfxMusic.clip = m_soundFXBackgoundDictionary[audioName];
+            m_backgroundSfxMusic.volume = BackgroundSfxVolume;
             m_backgroundSfxMusic.Play();
         }
     }
@@ -171,6 +196,7 @@ public class MusicManager : PersistentSingleton<MusicManager>
 
     private Dictionary<string, AudioClip> m_soundMusicDictionary;
     private Dictionary<string, AudioClip> m_soundFXDictionary;
+    private Dictionary<string, AudioClip> m_soundFXBackgoundDictionary;
 
     private AudioSource m_backgroundMusic;
     private AudioSource m_sfxMusic;

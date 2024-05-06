@@ -791,6 +791,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 495925840379877402, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
+      propertyPath: button1
+      value: 
+      objectReference: {fileID: 6493507219552766191}
+    - target: {fileID: 495925840379877402, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
+      propertyPath: button2
+      value: 
+      objectReference: {fileID: 894793882}
+    - target: {fileID: 4719605722144434606, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
+      propertyPath: button1
+      value: 
+      objectReference: {fileID: 6493507219552766191}
+    - target: {fileID: 4719605722144434606, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
+      propertyPath: button2
+      value: 
+      objectReference: {fileID: 894793882}
     - target: {fileID: 6328690277329132499, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -838,13 +854,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6152256770753402141, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 754170541}
-    - targetCorrespondingSourceObject: {fileID: 617775664672415036, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1714039205}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
 --- !u!1 &392452268 stripped
 GameObject:
@@ -2348,28 +2358,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &754170539 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6152256770753402141, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
-  m_PrefabInstance: {fileID: 392452267}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &754170541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754170539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7824f106a7e3dc6478d5dd1c235e8f16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftControllerCollider: {fileID: 887247864}
-  rightControllerCollider: {fileID: 518875624}
-  button1: {fileID: 6493507219552766191}
-  button2: {fileID: 894793882}
-  isRightHand: 0
 --- !u!1 &802402009
 GameObject:
   m_ObjectHideFlags: 0
@@ -4589,6 +4577,7 @@ MonoBehaviour:
   quitButton: {fileID: 2003108606}
   resetButton: {fileID: 540325933}
   m_musicSlider: {fileID: 1119797712}
+  m_sfxSlider: {fileID: 0}
   maxPositionX: 3.6
   minPositionX: -3.6
   maxPositionZ: 3.6
@@ -5781,28 +5770,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637021885}
   m_CullTransparentMesh: 1
---- !u!1 &1714039203 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 617775664672415036, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
-  m_PrefabInstance: {fileID: 392452267}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1714039205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714039203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7824f106a7e3dc6478d5dd1c235e8f16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftControllerCollider: {fileID: 887247864}
-  rightControllerCollider: {fileID: 518875624}
-  button1: {fileID: 6493507219552766191}
-  button2: {fileID: 894793882}
-  isRightHand: 1
 --- !u!1 &1757052604
 GameObject:
   m_ObjectHideFlags: 0
@@ -5878,6 +5845,7 @@ MonoBehaviour:
   modifier: 0.5
   volumeMusic: 0.5
   volumeSfx: 0
+  volumeBackgroundSfx: 0
 --- !u!1 &1914052179
 GameObject:
   m_ObjectHideFlags: 0
