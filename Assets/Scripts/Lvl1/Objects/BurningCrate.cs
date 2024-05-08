@@ -60,7 +60,7 @@ public class BurningCrate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("BlowtorchFlame"))
+        if (other.gameObject.CompareTag("BlowtorchFlame") || other.gameObject.CompareTag("Match"))
         {
             touchingFire = true;
         }
@@ -68,7 +68,7 @@ public class BurningCrate : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("BlowtorchFlame"))
+        if (other.gameObject.CompareTag("BlowtorchFlame") || other.gameObject.CompareTag("Match"))
         {
             touchingFire = false;
         }
