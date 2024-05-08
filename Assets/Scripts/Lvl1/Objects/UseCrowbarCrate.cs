@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 [RequireComponent(typeof(AudioSource))]
 public class UseCrowbarCrate : MonoBehaviour
@@ -38,7 +39,9 @@ public class UseCrowbarCrate : MonoBehaviour
     {
         socketCaja.SetActive(false);
         animatorCrowbar.SetInteger("openCrate", 0);
-        tapaCaja.AddComponent<Rigidbody>();
+        //tapaCaja.AddComponent<Rigidbody>();
+
+        tapaCaja.GetComponent<XRGrabInteractable>().enabled = true;
         tapaCaja.GetComponent<Rigidbody>().AddForce(direccionImpulso * fuerzaInicial, ForceMode.Impulse);
     }
 }
