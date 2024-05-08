@@ -7,6 +7,9 @@ public class BurningCrate : MonoBehaviour
     [SerializeField]
     private GameObject fire;
 
+    [SerializeField]
+    private GameObject objectInside;
+
     private bool touchingFire = false;
     private bool inFlames = false;
     private float segundos = 0.0f;
@@ -29,6 +32,7 @@ public class BurningCrate : MonoBehaviour
             {
                 fire.SetActive(false);
                 this.gameObject.SetActive(false); //desactivamos la caja
+                objectInside.SetActive(true);
             }
         }
         else {

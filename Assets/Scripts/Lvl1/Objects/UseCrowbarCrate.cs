@@ -8,8 +8,6 @@ public class UseCrowbarCrate : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField]
-    private GameObject crowbar;
-    [SerializeField]
     private Animator animatorCrowbar;
     [SerializeField]
     private AudioClip openCrateSFX;

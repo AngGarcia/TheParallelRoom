@@ -197,6 +197,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1428607546}
     m_Modifications:
+    - target: {fileID: 27428750612350368, guid: de2a6fb1a2ff9b741ad22ad9a0da69f7, type: 3}
+      propertyPath: objectInside
+      value: 
+      objectReference: {fileID: 1994484400}
     - target: {fileID: 890540890276191452, guid: de2a6fb1a2ff9b741ad22ad9a0da69f7, type: 3}
       propertyPath: m_Name
       value: Crate_v2
@@ -778,7 +782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 180122807084080405, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 467191393510125982, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: Lock
@@ -802,7 +806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3327497461744153844, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4140376008756824790, guid: 4d25915f7f5394d4dbfe2ea952a24808, type: 3}
       propertyPath: m_IsActive
@@ -1125,6 +1129,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1428607546}
     m_Modifications:
+    - target: {fileID: 27428750612350368, guid: de2a6fb1a2ff9b741ad22ad9a0da69f7, type: 3}
+      propertyPath: objectInside
+      value: 
+      objectReference: {fileID: 1455404698}
     - target: {fileID: 890540890276191452, guid: de2a6fb1a2ff9b741ad22ad9a0da69f7, type: 3}
       propertyPath: m_Name
       value: MainCrate
