@@ -36,10 +36,13 @@ public class KeypadButton : MonoBehaviour
 
             pokeAttachTransform = interactor.attachTransform;
             offset = visualTarget.position - pokeAttachTransform.position;
+           // Debug.Log("Offset: " + offset);
 
             float pokeAngle = Vector3.Angle(offset, visualTarget.TransformDirection(localAxis));
+            //Debug.Log("pokeAngle: " + pokeAngle);
+           // Debug.Log("followAngleThreshold: " + followAngleThreshold);
 
-            if(pokeAngle < followAngleThreshold)
+            if (pokeAngle < followAngleThreshold)
             {
                 isFollowing = true;
                 freeze = false;

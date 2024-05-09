@@ -60,6 +60,7 @@ public class TNT : MonoBehaviour
         Debug.Log(distance);
         if (distance <= distanceToDie)
         {
+            //poner SFX de muerte del HappyWheels
             GameManager.SceneChangerInstance.mainMenu();
         }
         else
