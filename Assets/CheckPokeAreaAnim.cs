@@ -23,7 +23,11 @@ public class CheckPokeAreaAnim : MonoBehaviour
         animator = this.gameObject.GetComponent<Animator>();
         checkGrabPressed = this.gameObject.GetComponent<CheckGrabPressed>();
         buttonPos1 = button1.GetComponent<Transform>().position;
-        buttonPos2 = button2.GetComponent<Transform>().position;
+        if(button2!=null)
+        {
+            buttonPos2 = button2.GetComponent<Transform>().position;
+        }
+        
         distance = 0.5f;
     }
 
@@ -33,6 +37,7 @@ public class CheckPokeAreaAnim : MonoBehaviour
         
         leftControllerPos = leftControllerCollider.gameObject.GetComponent<Transform>().position;
         rightControllerPos = rightControllerCollider.gameObject.GetComponent<Transform>().position;
+        Debug.Log(Vector3.Distance(buttonPos1, leftControllerPos));
 
         if (isRightHand )
         {
@@ -52,7 +57,7 @@ public class CheckPokeAreaAnim : MonoBehaviour
         {
             if (Vector3.Distance(buttonPos1, leftControllerPos) <= distance || Vector3.Distance(buttonPos2, leftControllerPos) <= distance)
             {
-                //Debug.Log("ENTRO");
+                Debug.Log("ENTRO");
                 checkGrabPressed.isInPokeArea = true;
                 animator.SetInteger("Hand", 2);
             }

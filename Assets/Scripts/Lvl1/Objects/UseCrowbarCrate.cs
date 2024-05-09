@@ -16,8 +16,9 @@ public class UseCrowbarCrate : MonoBehaviour
     private AudioSource audioSource;
     private GameObject tapaCaja;
     private GameObject socketCaja;
+    private GameObject attachPointTapaCaja;
 
-    private float fuerzaInicial = 10f; 
+    private float fuerzaInicial = 5f; 
     private Vector3 direccionImpulso = Vector3.up;
 
     public void openCrateAnim(GameObject tapa)
@@ -35,13 +36,19 @@ public class UseCrowbarCrate : MonoBehaviour
         socketCaja = socket;
     }
 
+    public void setAttachPointCrateLid(GameObject attachPoint)
+    {
+        attachPointTapaCaja = attachPoint;
+    }
+
     public void abrirTapa()
     {
         socketCaja.SetActive(false);
         animatorCrowbar.SetInteger("openCrate", 0);
-        //tapaCaja.AddComponent<Rigidbody>();
-
-        tapaCaja.GetComponent<XRGrabInteractable>().enabled = true;
+        tapaCaja.AddComponent<Rigidbody>();
+        //tapaCaja.GetComponent<XRGrabInteractable>().enabled = true;
+        tapaCaja.AddComponent<XRGrabInteractable>();
+        tapaCaja.GetComponent<XRGrabInteractable>().attachTransform = attachPointTapaCaja.transform;
         tapaCaja.GetComponent<Rigidbody>().AddForce(direccionImpulso * fuerzaInicial, ForceMode.Impulse);
     }
 }
