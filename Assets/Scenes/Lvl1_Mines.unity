@@ -131,6 +131,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1428607546}
     m_Modifications:
+    - target: {fileID: 3482710247828760599, guid: 5c94b234c4640ac4ebcc2c52d9da53e5, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 602597990}
+    - target: {fileID: 3482710247828760599, guid: 5c94b234c4640ac4ebcc2c52d9da53e5, type: 3}
+      propertyPath: distanceToDie
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5093049049720279925, guid: 5c94b234c4640ac4ebcc2c52d9da53e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.922
@@ -345,6 +353,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1428607546}
     m_Modifications:
+    - target: {fileID: 3482710247828760599, guid: 5c94b234c4640ac4ebcc2c52d9da53e5, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 602597990}
+    - target: {fileID: 3482710247828760599, guid: 5c94b234c4640ac4ebcc2c52d9da53e5, type: 3}
+      propertyPath: distanceToDie
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5093049049720279925, guid: 5c94b234c4640ac4ebcc2c52d9da53e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.206
@@ -742,6 +758,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
+--- !u!1 &602597990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6359223420513620332, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
+  m_PrefabInstance: {fileID: 602597989}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &699092156 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 7357782539406059706, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
@@ -1389,6 +1410,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1428607546}
     m_Modifications:
+    - target: {fileID: 3482710247828760599, guid: 5c94b234c4640ac4ebcc2c52d9da53e5, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 602597990}
+    - target: {fileID: 3482710247828760599, guid: 5c94b234c4640ac4ebcc2c52d9da53e5, type: 3}
+      propertyPath: distanceToDie
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5093049049720279925, guid: 5c94b234c4640ac4ebcc2c52d9da53e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.441

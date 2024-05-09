@@ -9,8 +9,8 @@ public class TNT : MonoBehaviour
     public GameObject explosion;
     public float timeToExplode;
     public float timeToRespawn;
-    public float distanceToDie = 1.0f;
-    private GameObject player;
+    public float distanceToDie = 3.0f;
+    [SerializeField] private GameObject player;
     private float distance;
     public Transform respawnPosition;
     public GameObject dinamite;
@@ -18,7 +18,7 @@ public class TNT : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        //player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -56,8 +56,9 @@ public class TNT : MonoBehaviour
     {
         yield return new WaitForSeconds(explosionTime);
         explosion.SetActive(false);
-        distance = Mathf.Abs(Vector3.Distance(player.transform.position, this.transform.position));
-        if (distance < distanceToDie)
+        distance = Vector3.Distance(player.transform.position, this.transform.position);
+        Debug.Log(distance);
+        if (distance <= distanceToDie)
         {
             GameManager.SceneChangerInstance.mainMenu();
         }
