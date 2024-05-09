@@ -22,6 +22,7 @@ TagManager:
   - OrangeFlower
   - YellowFlower
   - FxTemporaire
+  - Poster
   layers:
   - Default
   - TransparentFX

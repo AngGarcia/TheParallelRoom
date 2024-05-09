@@ -20,7 +20,27 @@ public class Poster : MonoBehaviour
             poster.GetComponent<MeshRenderer>().material = poster1;
         }
 
-        else if(GameManager.LastSceneDataInstance.lastLevel <= 2)
+        else if(GameManager.LastSceneDataInstance.lastLevel == 2)
+        {
+            poster.GetComponent<MeshRenderer>().material = poster2;
+        }
+
+        else
+        {
+            poster.GetComponent<MeshRenderer>().material = poster3;
+        }
+
+        canChangeScene = true;
+    }
+
+    public void updatePosterMaterial()
+    {
+        if (GameManager.LastSceneDataInstance.lastLevel <= 1)
+        {
+            poster.GetComponent<MeshRenderer>().material = poster1;
+        }
+
+        else if (GameManager.LastSceneDataInstance.lastLevel == 2)
         {
             poster.GetComponent<MeshRenderer>().material = poster2;
         }

@@ -189,17 +189,40 @@ public class GameMenuManager : MonoBehaviour
         }
     }
 
+    public void pressedYES()
+    {
+        GameManager.Instance.resetProgress();
+        FadeScreen fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
+        if(fadeScreen != null)
+        {
+            Poster poster = GameObject.FindWithTag("Poster").GetComponent<Poster>();
+            if (poster != null)
+            {
+                fadeScreen.FadeOut();
+                poster.updatePosterMaterial();
+                pressedNO();
+                closeMenu();
+                fadeScreen.FadeIn();
+            }
+        }
+        
+        //GameManager.SceneChangerInstance.mainMenu();
+    }
+
     public void onMusicValueChanged()
     {
         MusicManager.Instance.MusicVolume = m_musicSlider.value;
         GameManager.CommonVariablesInstance.volumeMusic = m_musicSlider.value;
+        MusicManager.Instance.MusicVolumeSave = m_musicSlider.value;
     }
 
     public void onSfxValueChanged()
     {
+        MusicManager.Instance.SfxVolumeSave = m_sfxSlider.value;
         MusicManager.Instance.SfxVolume = m_sfxSlider.value;
         GameManager.CommonVariablesInstance.volumeSfx = m_sfxSlider.value;
         MusicManager.Instance.BackgroundSfxVolume = m_sfxSlider.value;
+        MusicManager.Instance.BackgroundSfxVolumeSave = m_sfxSlider.value;
     }
 
     public void onQuitToMenu()

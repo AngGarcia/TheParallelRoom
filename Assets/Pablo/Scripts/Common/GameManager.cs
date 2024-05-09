@@ -54,6 +54,7 @@ public class GameManager : PersistentSingleton<GameManager>
         loadFromJson();
 
         level = GameManager.LastSceneDataInstance.lastLevel;
+        Debug.Log(level);
     }
     // Start is called before the first frame update
     void Start()
@@ -77,17 +78,17 @@ public class GameManager : PersistentSingleton<GameManager>
 
         string commonData = JsonUtility.ToJson(commonVariablesInstance);
         string commonFilePath = Application.persistentDataPath + "/saveSlot1/commonState.json";
-        Debug.Log(commonFilePath);
+        //Debug.Log(commonFilePath);
         System.IO.File.WriteAllText(commonFilePath, commonData);
-        Debug.Log("CommonVariables Saved successfully");
+       // Debug.Log("CommonVariables Saved successfully");
 
 
         lastSceneDataInstance.lastLevel = level;
         string lastSceneData = JsonUtility.ToJson(lastSceneDataInstance);
         string lastSceneDataFilePath = Application.persistentDataPath + "/saveSlot1/lastSceneData.json";
-        Debug.Log(lastSceneDataFilePath);
+        //Debug.Log(lastSceneDataFilePath);
         System.IO.File.WriteAllText(lastSceneDataFilePath, lastSceneData);
-        Debug.Log("CommonVariables Saved successfully");
+        //Debug.Log("CommonVariables Saved successfully");
     }
 
     public void loadFromJson()
@@ -99,7 +100,7 @@ public class GameManager : PersistentSingleton<GameManager>
             string commonData = System.IO.File.ReadAllText(commonFilePath);
 
             commonVariablesInstance = JsonUtility.FromJson<CommonVariables>(commonData);
-            Debug.Log("Common Data loaded");
+            //Debug.Log("Common Data loaded");
         }
 
         //lastSceneData
@@ -128,10 +129,14 @@ public class GameManager : PersistentSingleton<GameManager>
 
     public void resetProgress()
     {
-
-        LastSceneDataInstance.lastLevel= 0;
+        //Debug.Log("ENTRO A RESET");
+        //Debug.Log(LastSceneDataInstance.lastLevel);
+        LastSceneDataInstance.lastLevel= 1;
+        this.level = 1;
+        //Debug.Log("LVL TRAS CAMBIAR");
+        //Debug.Log(LastSceneDataInstance.lastLevel);
         saveToJson();
-        sceneChangerInstance.mainMenu();
+        //sceneChangerInstance.mainMenu();
     }
 
 }
