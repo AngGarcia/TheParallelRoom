@@ -693,22 +693,6 @@ PrefabInstance:
       propertyPath: button1
       value: 
       objectReference: {fileID: 74066452}
-    - target: {fileID: 4719605722144434606, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
-      propertyPath: button2
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053592347975567036, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.037
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053592347975567036, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053592347975567036, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.225
-      objectReference: {fileID: 0}
     - target: {fileID: 6328690277329132499, guid: e3428e77368e9df4d9a9207fba602610, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.98

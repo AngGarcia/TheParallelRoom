@@ -959,7 +959,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47bc41110e178904abcc2b51d48f2f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crowbar: {fileID: 8294490197990276093}
   animatorCrowbar: {fileID: 2060635813103143220}
   openCrateSFX: {fileID: 8300000, guid: 40ed6a838daea6243b42804b37b6bf03, type: 3}
 --- !u!82 &8843740854331360872
