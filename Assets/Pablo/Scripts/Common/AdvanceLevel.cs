@@ -9,6 +9,10 @@ public class AdvanceLevel : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            if (GameManager.Instance.level == 1)
+            {
+                MusicManager.Instance.PlayBackgroundMusic(AppSounds.SOY_MINERO);
+            }
             GameManager.Instance.level++;
             GameManager.Instance.saveToJson();
             GameManager.SceneChangerInstance.mainMenu();
