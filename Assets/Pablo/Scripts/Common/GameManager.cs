@@ -54,7 +54,7 @@ public class GameManager : PersistentSingleton<GameManager>
         loadFromJson();
 
         level = GameManager.LastSceneDataInstance.lastLevel;
-        Debug.Log(level);
+        //Debug.Log(level);
     }
     // Start is called before the first frame update
     void Start()
