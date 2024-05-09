@@ -307,63 +307,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!1001 &1469793503
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 355738036546075522, guid: 6f635a53c5581e24fa35cf4c3fb4b00e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 355738036546075522, guid: 6f635a53c5581e24fa35cf4c3fb4b00e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 355738036546075522, guid: 6f635a53c5581e24fa35cf4c3fb4b00e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -29.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 355738036546075522, guid: 6f635a53c5581e24fa35cf4c3fb4b00e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 355738036546075522, guid: 6f635a53c5581e24fa35cf4c3fb4b00e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 355738036546075522, guid: 6f635a53c5581e24fa35cf4c3fb4b00e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 355738036546075522, guid: 6f635a53c5581e24fa35cf4c3fb4b00e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 355738036546075522, guid: 6f635a53c5581e24fa35cf4c3fb4b00e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 355738036546075522, guid: 6f635a53c5581e24fa35cf4c3fb4b00e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 355738036546075522, guid: 6f635a53c5581e24fa35cf4c3fb4b00e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3660170672494353139, guid: 6f635a53c5581e24fa35cf4c3fb4b00e, type: 3}
-      propertyPath: m_Name
-      value: OfficeRoom
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6f635a53c5581e24fa35cf4c3fb4b00e, type: 3}
 --- !u!64 &6423131633137653650
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -936,5 +879,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 62680662}
   - {fileID: 258765191}
-  - {fileID: 1469793503}
   - {fileID: 6471758064616398574}

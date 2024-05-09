@@ -32,6 +32,7 @@ public class GameMenuManager : MonoBehaviour
     void Start()
     {
         m_musicSlider.value = GameManager.CommonVariablesInstance.volumeMusic;
+        m_sfxSlider.value = GameManager.CommonVariablesInstance.volumeSfx;
     }
 
     // Update is called once per frame

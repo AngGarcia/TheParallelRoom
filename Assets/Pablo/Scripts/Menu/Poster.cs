@@ -69,24 +69,24 @@ public class Poster : MonoBehaviour
     { 
         if (canChangeScene) 
         {
-            if (GameManager.LastSceneDataInstance.lastLevel == 2)
-            {
-                canChangeScene = false;
-                goToLvl2();
+            //if (GameManager.LastSceneDataInstance.lastLevel == 2)
+            //{
+            //    canChangeScene = false;
+            //    goToLvl2();
                 
-            }
+            //}
 
-            else if (GameManager.LastSceneDataInstance.lastLevel == 3)
-            {
-                canChangeScene = false;
-                goToLvl3();
-            }
+            //else if (GameManager.LastSceneDataInstance.lastLevel == 3)
+            //{
+            //    canChangeScene = false;
+            //    goToLvl3();
+            //}
 
-            else
-            {
+            //else
+            //{
                 canChangeScene = false;
                 goToLvl1();
-            }
+            //}
         }
         
     }
