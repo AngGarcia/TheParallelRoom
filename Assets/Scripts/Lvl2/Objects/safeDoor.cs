@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class safeDoor : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject blueFlower;
+
     private HingeJoint doorJoint;
 
     public Animator wheelAnimator;
@@ -11,7 +14,8 @@ public class safeDoor : MonoBehaviour
 
     void Start()
     {
-       // doorJoint = this.gameObject.GetComponent<HingeJoint>();
+        // doorJoint = this.gameObject.GetComponent<HingeJoint>();
+        blueFlower.SetActive(false);
     }
 
 
@@ -37,6 +41,8 @@ public class safeDoor : MonoBehaviour
             //doorJoint.targetRotation = Quaternion.Euler(20f, 0f, 0f);
             wheelAnimator.SetInteger("openSafe", 0);
         }
+
+        blueFlower.SetActive(true);
 
     }
 }
