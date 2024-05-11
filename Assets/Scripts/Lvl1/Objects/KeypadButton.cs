@@ -69,6 +69,7 @@ public class KeypadButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (freeze)
         {
             return;
@@ -85,5 +86,10 @@ public class KeypadButton : MonoBehaviour
         {
             visualTarget.localPosition = Vector3.Lerp(visualTarget.localPosition, initialLocalPos, Time.deltaTime * resetSpeed);
         }
+    }
+
+    public void setIsFollowing(bool isFollow)
+    {
+        isFollowing = isFollow;
     }
 }

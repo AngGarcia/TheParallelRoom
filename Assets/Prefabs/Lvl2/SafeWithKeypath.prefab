@@ -54,8 +54,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.015356326, y: 0.009540448, z: 0.0048228856}
-  m_Center: {x: -0.10694519, y: 0.25308898, z: 0.33416256}
+  m_Size: {x: 0.015356326, y: 0.009540448, z: 0.0012303365}
+  m_Center: {x: -0.10694509, y: 0.25308898, z: 0.33495796}
 --- !u!114 &9108437892675545070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,7 +88,19 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3742917062416501175}
+        m_TargetAssemblyTypeName: SafeKeypad, Assembly-CSharp
+        m_MethodName: typeNum
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -206,6 +218,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1596289896954767634}
   - component: {fileID: 2903037616440855586}
+  - component: {fileID: 4826242050564644439}
+  - component: {fileID: 4744814879894521472}
+  - component: {fileID: 1261001202844113527}
   m_Layer: 0
   m_Name: Interactable
   m_TagString: Untagged
@@ -247,8 +262,160 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.015513774, y: 0.010811509, z: 0.0062370296}
-  m_Center: {x: -0.10685101, y: 0.22553161, z: 0.3335876}
+  m_Size: {x: 0.015513774, y: 0.010811509, z: 0.0012282423}
+  m_Center: {x: -0.10685101, y: 0.22553161, z: 0.33493653}
+--- !u!114 &4826242050564644439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878710250231334314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3742917062416501175}
+        m_TargetAssemblyTypeName: SafeKeypad, Assembly-CSharp
+        m_MethodName: typeNum
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4744814879894521472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878710250231334314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115f1a2a50d85cd4b9d6dad4c95622be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Interactable: {fileID: 4826242050564644439}
+  m_PokeCollider: {fileID: 2903037616440855586}
+  m_PokeConfiguration:
+    m_UseConstant: 1
+    m_ConstantValue:
+      m_PokeDirection: 3
+      m_InteractionDepthOffset: 0
+      m_EnablePokeAngleThreshold: 1
+      m_PokeAngleThreshold: 45
+    m_Variable: {fileID: 0}
+--- !u!114 &1261001202844113527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878710250231334314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b44e45b2ad2ab6d41afd4756af138364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualTarget: {fileID: 6117099859736884132}
+  localAxis: {x: 0, y: 0, z: -1}
+  resetSpeed: 2
+  followAngleThreshold: 45
 --- !u!1 &879747416430441474
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,8 +802,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.015505328, y: 0.010671808, z: 0.004589042}
-  m_Center: {x: -0.12625921, y: 0.21202348, z: 0.33394384}
+  m_Size: {x: 0.015505328, y: 0.010671808, z: 0.00123823}
+  m_Center: {x: -0.12625921, y: 0.21202348, z: 0.33489233}
 --- !u!114 &3089259731995197375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,7 +836,19 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3742917062416501175}
+        m_TargetAssemblyTypeName: SafeKeypad, Assembly-CSharp
+        m_MethodName: typeNum
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -777,6 +956,37 @@ MonoBehaviour:
   localAxis: {x: 0, y: 0, z: -1}
   resetSpeed: 2
   followAngleThreshold: 45
+--- !u!1 &2896816667208984014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1421918246101500141}
+  m_Layer: 0
+  m_Name: realTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1421918246101500141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896816667208984014}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.086, y: 0.234, z: 0.3302}
+  m_LocalScale: {x: 0.13379, y: 0.13379, z: 0.13379}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6632797861628033464}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2991456193613553751
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,8 +1041,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.014404389, y: 0.010601073, z: 0.0058261766}
-  m_Center: {x: -0.14448123, y: 0.2393921, z: 0.33380023}
+  m_Size: {x: 0.014404389, y: 0.010601056, z: 0.001057934}
+  m_Center: {x: -0.14448123, y: 0.2393921, z: 0.33492666}
 --- !u!114 &1153834013355894166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,7 +1075,19 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3742917062416501175}
+        m_TargetAssemblyTypeName: SafeKeypad, Assembly-CSharp
+        m_MethodName: typeNum
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -1193,8 +1415,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.015951239, y: 0.010738743, z: 0.006326469}
-  m_Center: {x: -0.14446928, y: 0.2256164, z: 0.33372664}
+  m_Size: {x: 0.015951239, y: 0.010738727, z: 0.0011409939}
+  m_Center: {x: -0.14446928, y: 0.22561634, z: 0.33484033}
 --- !u!114 &3881212868999825048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1227,7 +1449,19 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3742917062416501175}
+        m_TargetAssemblyTypeName: SafeKeypad, Assembly-CSharp
+        m_MethodName: typeNum
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -1389,8 +1623,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.015505931, y: 0.01043558, z: 0.0050854683}
-  m_Center: {x: -0.10675454, y: 0.21169479, z: 0.3339059}
+  m_Size: {x: 0.015505931, y: 0.01043558, z: 0.0017189978}
+  m_Center: {x: -0.10675454, y: 0.21169479, z: 0.33518222}
 --- !u!114 &5007318596421899089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1423,7 +1657,19 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3742917062416501175}
+        m_TargetAssemblyTypeName: SafeKeypad, Assembly-CSharp
+        m_MethodName: cleanScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -1505,8 +1751,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115f1a2a50d85cd4b9d6dad4c95622be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Interactable: {fileID: 5007318596421899089}
-  m_PokeCollider: {fileID: 5669650588809960448}
+  m_Interactable: {fileID: 7539687759491359670}
+  m_PokeCollider: {fileID: 5781128836612502419}
   m_PokeConfiguration:
     m_UseConstant: 1
     m_ConstantValue:
@@ -1697,6 +1943,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5925557811556891731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7341760069683666350}
+  m_Layer: 0
+  m_Name: AttachPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7341760069683666350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5925557811556891731}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.12, y: 22.82, z: 31.42}
+  m_LocalScale: {x: 5.2415996, y: 43.890003, z: 5.7786355}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2642133862551569964}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5932456013257213601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,8 +2028,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.015175241, y: 0.010916799, z: 0.004999831}
-  m_Center: {x: -0.14452718, y: 0.21197341, z: 0.33315715}
+  m_Size: {x: 0.015175241, y: 0.010916799, z: 0.0013734198}
+  m_Center: {x: -0.14452718, y: 0.21197341, z: 0.33497}
 --- !u!114 &548620888277972510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1785,7 +2062,19 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3742917062416501175}
+        m_TargetAssemblyTypeName: SafeKeypad, Assembly-CSharp
+        m_MethodName: checkAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -2030,8 +2319,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.01556262, y: 0.010705896, z: 0.0051519675}
-  m_Center: {x: -0.12595218, y: 0.22543216, z: 0.33363822}
+  m_Size: {x: 0.015562613, y: 0.010705896, z: 0.0011214694}
+  m_Center: {x: -0.12595218, y: 0.22543216, z: 0.33491382}
 --- !u!114 &7567210124452898666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2064,7 +2353,19 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3742917062416501175}
+        m_TargetAssemblyTypeName: SafeKeypad, Assembly-CSharp
+        m_MethodName: typeNum
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -2226,8 +2527,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.015150273, y: 0.009701573, z: 0.005870896}
-  m_Center: {x: -0.12612267, y: 0.25335702, z: 0.33386305}
+  m_Size: {x: 0.015150257, y: 0.009701573, z: 0.0013218054}
+  m_Center: {x: -0.12612265, y: 0.25335702, z: 0.33491915}
 --- !u!114 &7539687759491359670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2260,7 +2561,19 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3742917062416501175}
+        m_TargetAssemblyTypeName: SafeKeypad, Assembly-CSharp
+        m_MethodName: typeNum
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -2422,8 +2735,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.014906267, y: 0.009157464, z: 0.0050472887}
-  m_Center: {x: -0.14433965, y: 0.25310388, z: 0.3342322}
+  m_Size: {x: 0.014906267, y: 0.009157464, z: 0.0010664075}
+  m_Center: {x: -0.14433965, y: 0.25310388, z: 0.33483014}
 --- !u!114 &29083293509446253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2456,7 +2769,19 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3742917062416501175}
+        m_TargetAssemblyTypeName: SafeKeypad, Assembly-CSharp
+        m_MethodName: typeNum
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -2784,8 +3109,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.014999255, y: 0.009165197, z: 0.006281363}
-  m_Center: {x: -0.10687061, y: 0.23958111, z: 0.33364636}
+  m_Size: {x: 0.014999255, y: 0.009165197, z: 0.0011468577}
+  m_Center: {x: -0.10687057, y: 0.23958111, z: 0.3348688}
 --- !u!114 &7194897578917386258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2818,7 +3143,19 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3742917062416501175}
+        m_TargetAssemblyTypeName: SafeKeypad, Assembly-CSharp
+        m_MethodName: typeNum
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -3063,8 +3400,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.014173243, y: 0.009891712, z: 0.0063909064}
-  m_Center: {x: -0.12582622, y: 0.23925817, z: 0.33390784}
+  m_Size: {x: 0.014173243, y: 0.009891696, z: 0.0011765957}
+  m_Center: {x: -0.12582622, y: 0.23925817, z: 0.3348664}
 --- !u!114 &1277990829835341726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3097,7 +3434,19 @@ MonoBehaviour:
   m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3742917062416501175}
+        m_TargetAssemblyTypeName: SafeKeypad, Assembly-CSharp
+        m_MethodName: typeNum
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
       m_Calls: []
@@ -3423,15 +3772,27 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 092bd131f9565a14abc54f0730015a9c, type: 2}
     - target: {fileID: -59556963115558785, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.72712874
+      value: 1.1576617
+      objectReference: {fileID: 0}
+    - target: {fileID: -59556963115558785, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5921
+      objectReference: {fileID: 0}
+    - target: {fileID: -59556963115558785, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5921
       objectReference: {fileID: 0}
     - target: {fileID: -59556963115558785, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.022136
+      value: -0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: -59556963115558785, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.136
       objectReference: {fileID: 0}
     - target: {fileID: -59556963115558785, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0000000030205
+      value: -0.185
       objectReference: {fileID: 0}
     - target: {fileID: 7974561006247351, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3564,6 +3925,12 @@ PrefabInstance:
     - {fileID: -6392482767328028726, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 7341760069683666350}
+    - targetCorrespondingSourceObject: {fileID: -59556963115558785, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1421918246101500141}
     - targetCorrespondingSourceObject: {fileID: -4184297921916178266, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3554739430297920082}
@@ -3636,13 +4003,59 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1747807589269135757, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4167121260093740508}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -8068073526183931155, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3697073787028403215}
+    - targetCorrespondingSourceObject: {fileID: -8068073526183931155, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3761149981302653778}
+    - targetCorrespondingSourceObject: {fileID: -8068073526183931155, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8251290114924039365}
+    - targetCorrespondingSourceObject: {fileID: -8068073526183931155, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5404033062871041042}
+    - targetCorrespondingSourceObject: {fileID: -5884507372065911507, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3742917062416501175}
+    - targetCorrespondingSourceObject: {fileID: 8491344472044378634, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3655915839227334916}
+    - targetCorrespondingSourceObject: {fileID: 8491344472044378634, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1405281307378983234}
   m_SourcePrefab: {fileID: 100100000, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
 --- !u!4 &533703094237217229 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6608997404700123126, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
   m_PrefabInstance: {fileID: 2531031523219972551}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &969963295090912490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5884507372065911507, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+  m_PrefabInstance: {fileID: 2531031523219972551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3742917062416501175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969963295090912490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a08817a0074310f4f99a80cf28baee9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  safeDoor: {fileID: 8251290114924039365}
+  pokeInteractorLeft: {fileID: 0}
+  pokeInteractorRight: {fileID: 0}
+  leftControllerCollider: {fileID: 0}
+  rightControllerCollider: {fileID: 0}
+  realPosition: {fileID: 1421918246101500141}
+  wheelAnimator: {fileID: 3655915839227334916}
+  botonOK: {fileID: 3602477939594696894}
 --- !u!4 &1103929441133414747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6020760502227048292, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
@@ -3663,11 +4076,236 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8963338832246980119, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
   m_PrefabInstance: {fileID: 2531031523219972551}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2642133862551569964 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+  m_PrefabInstance: {fileID: 2531031523219972551}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3480228046107359388 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1399571901344586075, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
   m_PrefabInstance: {fileID: 2531031523219972551}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3686326163854422826 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8068073526183931155, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+  m_PrefabInstance: {fileID: 2531031523219972551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &3697073787028403215
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686326163854422826}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &3761149981302653778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686326163854422826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders:
+  - {fileID: 5404033062871041042}
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_AttachTransform: {fileID: 7341760069683666350}
+  m_SecondaryAttachTransform: {fileID: 0}
+  m_UseDynamicAttach: 0
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
+  m_AttachEaseInTime: 0.15
+  m_MovementType: 0
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 1
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 8
+  m_TightenPosition: 0.1
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 8
+  m_TightenRotation: 0.1
+  m_TrackScale: 1
+  m_SmoothScale: 0
+  m_SmoothScaleAmount: 8
+  m_TightenScale: 0.1
+  m_ThrowOnDetach: 1
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1.5
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_AttachPointCompatibilityMode: 0
+  m_StartingSingleGrabTransformers: []
+  m_StartingMultipleGrabTransformers: []
+  m_AddDefaultGrabTransformers: 1
+--- !u!114 &8251290114924039365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686326163854422826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d9a8a52e9e1a3478fcccd4408dc79f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheelAnimator: {fileID: 3655915839227334916}
+  openAngle: 20
+--- !u!65 &5404033062871041042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686326163854422826}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3825044, y: 0.41820788, z: 0.070233725}
+  m_Center: {x: -0.08874054, y: 0.22802792, z: 0.2801197}
 --- !u!4 &4278827012221157450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1747807589269135757, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
@@ -3676,6 +4314,64 @@ Transform:
 --- !u!4 &5954889308676536121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8179666688828511998, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+  m_PrefabInstance: {fileID: 2531031523219972551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6266573116659022797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8491344472044378634, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
+  m_PrefabInstance: {fileID: 2531031523219972551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3655915839227334916
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6266573116659022797}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 01a4c7e2e0b301546929bfc3a1bef42d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1405281307378983234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6266573116659022797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3722f8b3022d85249b33af9920edfa44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8251290114924039365}
+        m_TargetAssemblyTypeName: safeDoor, Assembly-CSharp
+        m_MethodName: OpenDoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &6632797861628033464 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -59556963115558785, guid: 4a301f48cd46f45418c103fe5c6729ff, type: 3}
   m_PrefabInstance: {fileID: 2531031523219972551}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &7311389236452588317 stripped

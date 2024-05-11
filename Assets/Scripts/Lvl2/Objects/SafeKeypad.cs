@@ -18,6 +18,8 @@ public class SafeKeypad : MonoBehaviour
     private Transform realPosition;
     [SerializeField]
     private Animator wheelAnimator;
+    [SerializeField]
+    private KeypadButton botonOK;
 
     private string actualCode = "7777"; //es diferente
     private int numMaxDigitos;
@@ -111,6 +113,7 @@ public class SafeKeypad : MonoBehaviour
             Debug.Log("Actual numero: " + actualNum);
             canType = false;
             done = true;
+            botonOK.setIsFollowing(false);
 
             MusicManager.Instance.PlaySound(AppSounds.KEYPAD_RIGHT);
 
