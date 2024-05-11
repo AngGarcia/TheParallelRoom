@@ -16,14 +16,14 @@ MonoBehaviour:
   - Default
   - UI
   - PokeObject
-  - Pieza
+  - Pawn
   - Flowers
   - CrowbarSocket
   - Key
-  - 
-  - 
-  - 
-  - 
+  - Knight
+  - Bishop1
+  - Bishop2
+  - King
   - 
   - 
   - 
