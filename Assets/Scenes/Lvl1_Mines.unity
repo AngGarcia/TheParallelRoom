@@ -1392,9 +1392,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7a856918f5d2545a9e0514f209b54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voices: {fileID: 8300000, guid: 44cc1609494bdef4ea5862b90422bdee, type: 3}
-  rocksFalling: {fileID: 8300000, guid: 977e95da911400840bd7b701feca7ad0, type: 3}
-  explosion: {fileID: 8300000, guid: c7f55a6f61b0ad74fb94a7a195e374f7, type: 3}
   mineroSong: {fileID: 8300000, guid: 38afcc3d71daa804d871a40e4736639f, type: 3}
   ambientMusic: {fileID: 8300000, guid: c767d1590bde2984c910c859dcb3b257, type: 3}
 --- !u!4 &2144668924 stripped
