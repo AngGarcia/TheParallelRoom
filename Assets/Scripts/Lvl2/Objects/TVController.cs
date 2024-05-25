@@ -5,9 +5,9 @@ using UnityEngine;
 public class TVController : MonoBehaviour
 {
     [SerializeField]
-    private GameObject tvScreen;
+    private MeshRenderer tvScreen;
     [SerializeField]
-    private GameObject tv;
+    private Television tv;
 
     [SerializeField]
     private Material tvOff;
@@ -20,7 +20,7 @@ public class TVController : MonoBehaviour
     private void Start()
     {
         switchTV = false;
-        tvScreen.GetComponent<MeshRenderer>().material = tvOff;
+        tvScreen.material = tvOff;
     }
 
     public void turnOnTV()
@@ -28,14 +28,14 @@ public class TVController : MonoBehaviour
         MusicManager.Instance.PlaySound(AppSounds.TV_CONTROLLER_CLICK);
 
         if (switchTV){
-            tvScreen.GetComponent<MeshRenderer>().material = tvOff;
-            tv.GetComponent<Television>().turnOFF();
+            tvScreen.material = tvOff;
+            tv.turnOFF();
             switchTV = false;
         }
         else
         {
-            tvScreen.GetComponent<MeshRenderer>().material = tvOn;
-            tv.GetComponent<Television>().turnON();
+            tvScreen.material = tvOn;
+            tv.turnON();
             switchTV = true;
         }
     }

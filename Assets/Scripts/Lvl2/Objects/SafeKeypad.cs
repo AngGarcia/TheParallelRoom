@@ -81,6 +81,16 @@ public class SafeKeypad : MonoBehaviour
                 pokeInteractorRight.SetActive(true);
                 rightControllerCollider.enabled = false;
             }
+
+            //comprobamos el código
+            if(actualNum == actualCode)
+            {
+                checkAnswer();
+            }
+            else if(actualNum.Length >= numMaxDigitos)
+            {
+                cleanScreen();
+            }
         }
     }
 
@@ -102,38 +112,24 @@ public class SafeKeypad : MonoBehaviour
             MusicManager.Instance.PlaySound(AppSounds.SAFE_BUTTON);
             canType = true;
             actualNum = "";
-            Debug.Log("Actual numero: " + actualNum);
         }
     }
 
     public void checkAnswer()
     {
-        if (actualNum == actualCode)
-        {
-            Debug.Log("Actual numero: " + actualNum);
-            canType = false;
-            done = true;
-            botonOK.setIsFollowing(false);
+        canType = false;
+        done = true;
+        botonOK.setIsFollowing(false);
 
-            MusicManager.Instance.PlaySound(AppSounds.SAFE_BUTTON);
+        pokeInteractorLeft.SetActive(false);
+        pokeInteractorRight.SetActive(false);
+        leftControllerCollider.enabled = true;
+        rightControllerCollider.enabled = true;
 
-            pokeInteractorLeft.SetActive(false);
-            pokeInteractorRight.SetActive(false);
-            leftControllerCollider.enabled = true;
-            rightControllerCollider.enabled = true;
-
-            //realizar animación de apertura y abrir la caja fuerte
-            //ejecutar animación y esta tendrá un evento que abre la puerta (como el Crate del lvl1)
-            wheelAnimator.SetInteger("openSafe", 1);
-            MusicManager.Instance.PlaySound(AppSounds.UNLOCK_SAFE);
-        }
-        else
-        {
-            MusicManager.Instance.PlaySound(AppSounds.SAFE_BUTTON);
-            actualNum = "";
-            Debug.Log("Actual numero: " + actualNum);
-            canType = true;
-        }
+        //realizar animación de apertura y abrir la caja fuerte
+        //ejecutar animación y esta tendrá un evento que abre la puerta (como el Crate del lvl1)
+        wheelAnimator.SetInteger("openSafe", 1);
+        MusicManager.Instance.PlaySound(AppSounds.UNLOCK_SAFE);
     }
 
     private void OnDrawGizmos()
