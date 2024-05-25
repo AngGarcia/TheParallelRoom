@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class unlockCupboardDoors : MonoBehaviour
+{
+
+    [SerializeField] private HingeJoint Door1;
+    [SerializeField] private HingeJoint Door2;
+    // Start is called before the first frame update
+    void Start()
+    {
+        lockDoors();
+    }
+
+    public void unlockDoors()
+    {
+        JointLimits limit = Door1.limits;
+        limit.max = 100.0f;
+        
+        Door1.limits = limit;
+
+        limit = Door2.limits;
+        limit.max = 100.0f;
+        
+        Door1.limits = limit;
+    }
+
+    void lockDoors()
+    {
+        JointLimits limit = Door1.limits;
+        limit.max = 0.0f;
+
+        Door1.limits = limit;
+
+        limit = Door2.limits;
+        limit.max = 0.0f;
+
+        Door1.limits = limit;
+    }
+}

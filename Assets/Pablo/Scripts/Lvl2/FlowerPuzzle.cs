@@ -21,17 +21,8 @@ public class FlowerPuzzle : MonoBehaviour
     public int numToSolve = 4;
     public int numSolved = 0;
     public bool puzzlePassed = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private tableMarcos tableMarcos;
 
     public void winPuzzle()
     {
@@ -41,7 +32,7 @@ public class FlowerPuzzle : MonoBehaviour
     IEnumerator win()
     {
         yield return new WaitForSeconds(1.0f);
-        Debug.Log("FLOWER PUZZLE PASSED");
+        //Debug.Log("FLOWER PUZZLE PASSED");
         puzzlePassed = true;
         blueFlower.GetComponent<XRGrabInteractable>().enabled = false;
         yellowFlower.GetComponent<XRGrabInteractable>().enabled = false;
@@ -57,5 +48,7 @@ public class FlowerPuzzle : MonoBehaviour
         yellowFlower.GetComponent<Rigidbody>().isKinematic = true;
         redFlower.GetComponent<Rigidbody>().isKinematic = true;
         orangeFlower.GetComponent<Rigidbody>().isKinematic = true;
+
+        tableMarcos.unlockTableMarcos();
     }
 }

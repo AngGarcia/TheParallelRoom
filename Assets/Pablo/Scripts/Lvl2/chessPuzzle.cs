@@ -57,6 +57,8 @@ public class chessPuzzle : MonoBehaviour
     [SerializeField] private Vector3 bishop2InitialPos;
     [SerializeField] private Vector3 kingInitialPos;
 
+    [SerializeField] private unlockCupboardDoors cupboardDoors;
+
     private bool puzzlePassed = false;
 
     private void Start()
@@ -228,6 +230,9 @@ public class chessPuzzle : MonoBehaviour
         socket28.GetComponent<XRSocketInteractor>().enabled = false;
         socket29.GetComponent<XRSocketInteractor>().enabled = false;
         socket30.GetComponent<XRSocketInteractor>().enabled = false;
+
+        cupboardDoors.unlockDoors();
     }
+
 
 }
