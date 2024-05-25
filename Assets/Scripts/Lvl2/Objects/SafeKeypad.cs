@@ -21,7 +21,7 @@ public class SafeKeypad : MonoBehaviour
     [SerializeField]
     private KeypadButton botonOK;
 
-    private string actualCode = "7777"; //es diferente
+    private string actualCode = "2352";
     private int numMaxDigitos;
     private string actualNum;
     private bool canType;
