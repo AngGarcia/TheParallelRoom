@@ -27,6 +27,15 @@ public class SceneChanger : MonoBehaviour
         //Cursor.lockState = CursorLockMode.Locked;
     }
 
+    public void lvl2()
+    {
+        StartCoroutine(delayLvl2());
+        //SceneManager.LoadScene("Lvl1_Mines");
+        //GameManager.Instance.level = 1;
+        //GameManager.Instance.saveToJson();
+        //Cursor.lockState = CursorLockMode.Locked;
+    }
+
     public void mainMenu()
     {
         StartCoroutine (delayMainMenuScreen());
@@ -59,6 +68,24 @@ public class SceneChanger : MonoBehaviour
             Debug.Log("BUSCO FADER SCREEN");
         }
             
+    }
+
+    IEnumerator delayLvl2()
+    {
+        fadeScreen.FadeOut();
+
+        yield return new WaitForSecondsRealtime(fadeScreen.fadeDuration);
+
+        SceneManager.LoadScene("Lvl2_Habitación");
+        GameManager.Instance.level = 2;
+        GameManager.Instance.saveToJson();
+        Cursor.lockState = CursorLockMode.Locked;
+        if (GameObject.FindWithTag("faderScreen") != null)
+        {
+            fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
+            Debug.Log("BUSCO FADER SCREEN");
+        }
+
     }
 
     IEnumerator delayMainMenuScreen()

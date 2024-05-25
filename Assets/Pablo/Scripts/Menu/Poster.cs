@@ -77,7 +77,7 @@ public class Poster : MonoBehaviour
 
     public void goToLvl2()
     {
-        GameManager.SceneChangerInstance.lvl1();
+        GameManager.SceneChangerInstance.lvl2();
     }
 
     public void goToLvl3()
@@ -93,7 +93,7 @@ public class Poster : MonoBehaviour
             //{
             //    canChangeScene = false;
             //    goToLvl2();
-                
+
             //}
 
             //else if (GameManager.LastSceneDataInstance.lastLevel == 3)
@@ -104,8 +104,17 @@ public class Poster : MonoBehaviour
 
             //else
             //{
+            if (GameManager.Instance.level <= 1)
+            {
                 canChangeScene = false;
                 goToLvl1();
+            }
+            else if(GameManager.Instance.level == 2)
+            {
+                canChangeScene = false;
+                goToLvl2();
+            }
+                
             //}
         }
         
