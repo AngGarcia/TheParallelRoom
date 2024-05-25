@@ -17,5 +17,16 @@ public class AdvanceLevel : MonoBehaviour
             GameManager.Instance.saveToJson();
             GameManager.SceneChangerInstance.mainMenu();
         }
+
+        if(other.gameObject.tag == "Key")
+        {
+            if (GameManager.Instance.level == 2)
+            {
+                MusicManager.Instance.PlayBackgroundMusic(AppSounds.SOY_MINERO);
+            }
+            GameManager.Instance.level=1;
+            GameManager.Instance.saveToJson();
+            GameManager.SceneChangerInstance.mainMenu();
+        }
     }
 }
