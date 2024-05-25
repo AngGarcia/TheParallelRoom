@@ -24,6 +24,8 @@ public class safeDoor : MonoBehaviour
         if (this.gameObject.GetComponent<HingeJoint>() == null)
         {
             Debug.Log("Abriendo puerta...");
+            MusicManager.Instance.PlaySound(AppSounds.UNLOCK_SAFE);
+
             doorJoint = this.gameObject.AddComponent<HingeJoint>();
             doorJoint.anchor = new Vector3(-0.3f, 0.03f, 0.32f);
             doorJoint.axis = new Vector3(0, 1, 0);

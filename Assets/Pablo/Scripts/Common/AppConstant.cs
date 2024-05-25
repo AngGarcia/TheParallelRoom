@@ -34,6 +34,15 @@ public class AppSounds
     public static readonly string OPEN_CRATE = "openCrate";
     public static readonly string SHOVEL_DIG = "shovelDig";
     public static readonly string ROCKS_FALLING = "rocksFalling";
+    public static readonly string PLAYER_DEATH = "playerDeath";
+
+    //Lvl2
+    public static readonly string OPEN_EXIT_DOOR = "openExitDoor";
+    public static readonly string OPEN_FURNITURE = "openFurniture";
+    public static readonly string SAFE_BUTTON = "safeButton";
+    public static readonly string TV_CONTROLLER_CLICK = "tvControllerClick";
+    public static readonly string TV_STATIC = "tvStatic";
+    public static readonly string UNLOCK_SAFE = "unlockSafe";
 
 }
 

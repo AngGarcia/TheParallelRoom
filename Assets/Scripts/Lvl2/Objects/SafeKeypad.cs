@@ -88,7 +88,7 @@ public class SafeKeypad : MonoBehaviour
     {
         if (canType && !done)
         {
-            MusicManager.Instance.PlaySound(AppSounds.KEYPAD_BUTTON);
+            MusicManager.Instance.PlaySound(AppSounds.SAFE_BUTTON);
             actualNum = actualNum + numToType.ToString();
             Debug.Log(numToType + " tipeado");
             Debug.Log("Actual numero: " + actualNum);
@@ -99,7 +99,7 @@ public class SafeKeypad : MonoBehaviour
     {
         if (!done)
         {
-            MusicManager.Instance.PlaySound(AppSounds.KEYPAD_BUTTON);
+            MusicManager.Instance.PlaySound(AppSounds.SAFE_BUTTON);
             canType = true;
             actualNum = "";
             Debug.Log("Actual numero: " + actualNum);
@@ -115,7 +115,7 @@ public class SafeKeypad : MonoBehaviour
             done = true;
             botonOK.setIsFollowing(false);
 
-            MusicManager.Instance.PlaySound(AppSounds.KEYPAD_RIGHT);
+            MusicManager.Instance.PlaySound(AppSounds.SAFE_BUTTON);
 
             pokeInteractorLeft.SetActive(false);
             pokeInteractorRight.SetActive(false);
@@ -125,10 +125,11 @@ public class SafeKeypad : MonoBehaviour
             //realizar animación de apertura y abrir la caja fuerte
             //ejecutar animación y esta tendrá un evento que abre la puerta (como el Crate del lvl1)
             wheelAnimator.SetInteger("openSafe", 1);
+            MusicManager.Instance.PlaySound(AppSounds.UNLOCK_SAFE);
         }
         else
         {
-            MusicManager.Instance.PlaySound(AppSounds.KEYPAD_WRONG);
+            MusicManager.Instance.PlaySound(AppSounds.SAFE_BUTTON);
             actualNum = "";
             Debug.Log("Actual numero: " + actualNum);
             canType = true;
