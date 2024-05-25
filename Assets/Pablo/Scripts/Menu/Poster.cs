@@ -73,16 +73,20 @@ public class Poster : MonoBehaviour
     public void goToLvl1()
     {
         GameManager.SceneChangerInstance.lvl1();
+        StartCoroutine(resetButton());
+
     }
 
     public void goToLvl2()
     {
         GameManager.SceneChangerInstance.lvl2();
+        StartCoroutine(resetButton());
     }
 
     public void goToLvl3()
     {
         GameManager.SceneChangerInstance.lvl1();
+
     }
 
     public void goToLvl()
@@ -118,5 +122,11 @@ public class Poster : MonoBehaviour
             //}
         }
         
+    }
+
+    IEnumerator resetButton()
+    {
+        yield return new WaitForSeconds(2.0f);
+        canChangeScene = true;
     }
 }
