@@ -24,6 +24,7 @@ public class tableMarcos : MonoBehaviour
     public void unlockTableMarcos()
     {
         joint.zMotion = ConfigurableJointMotion.Limited;
+        MusicManager.Instance.PlaySound(AppSounds.OPEN_FURNITURE);
         key.SetActive(true);
     }
 }
