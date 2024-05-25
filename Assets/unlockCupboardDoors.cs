@@ -15,6 +15,7 @@ public class unlockCupboardDoors : MonoBehaviour
 
     public void unlockDoors()
     {
+        MusicManager.Instance.PlaySound(AppSounds.OPEN_FURNITURE);
         JointLimits limit = Door1.limits;
         limit.max = 100.0f;
         
