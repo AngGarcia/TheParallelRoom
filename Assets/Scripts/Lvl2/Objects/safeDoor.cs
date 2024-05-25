@@ -7,7 +7,7 @@ public class safeDoor : MonoBehaviour
     [SerializeField]
     private GameObject blueFlower;
 
-    private HingeJoint doorJoint;
+    private ConfigurableJoint doorJoint;
 
     public Animator wheelAnimator;
     public float openAngle = 20f;
@@ -16,12 +16,13 @@ public class safeDoor : MonoBehaviour
     {
         // doorJoint = this.gameObject.GetComponent<HingeJoint>();
         blueFlower.SetActive(false);
+        doorJoint = this.gameObject.GetComponent<ConfigurableJoint>();
     }
 
 
     public void OpenDoor()
     {
-        if (this.gameObject.GetComponent<HingeJoint>() == null)
+        /*if (this.gameObject.GetComponent<HingeJoint>() == null)
         {
             Debug.Log("Abriendo puerta...");
             MusicManager.Instance.PlaySound(AppSounds.UNLOCK_SAFE);
@@ -42,7 +43,12 @@ public class safeDoor : MonoBehaviour
             //doorJoint.angularXMotion = ConfigurableJointMotion.Limited;
             //doorJoint.targetRotation = Quaternion.Euler(20f, 0f, 0f);
             wheelAnimator.SetInteger("openSafe", 0);
-        }
+        }*/
+        doorJoint.xMotion = ConfigurableJointMotion.Limited;
+        doorJoint.angularXMotion = ConfigurableJointMotion.Limited;
+        //doorJoint.targetRotation = Quaternion.Euler(20f, 0f, 0f);
+        doorJoint.targetAngularVelocity = new Vector3(2f, 0f, 0f);
+        wheelAnimator.SetInteger("openSafe", 0);
 
         blueFlower.SetActive(true);
 
