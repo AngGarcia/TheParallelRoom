@@ -2645,26 +2645,6 @@ MonoBehaviour:
   redFlower: {fileID: 1914501403997899252}
   yellowFlower: {fileID: 4339642390872650643}
   orangeFlower: {fileID: 5239437133658904790}
-  pawnResetPosition: {x: 0, y: 0, z: 0}
-  knightResetPosition: {x: 0, y: 0, z: 0}
-  bishop1ResetPosition: {x: 0, y: 0, z: 0}
-  bishop2ResetPosition: {x: 0, y: 0, z: 0}
-  kingResetPosition: {x: 0, y: 0, z: 0}
-  remoteResetPosition: {x: 0, y: 0, z: 0}
-  blueFlowerResetPosition: {x: 0, y: 0, z: 0}
-  redFlowerResetPosition: {x: 0, y: 0, z: 0}
-  yellowFlowerResetPosition: {x: 0, y: 0, z: 0}
-  orangeFlowerResetPosition: {x: 0, y: 0, z: 0}
-  pawnResetRotation: {x: 0, y: 0, z: 0, w: 0}
-  knightResetRotation: {x: 0, y: 0, z: 0, w: 0}
-  bishop1ResetRotation: {x: 0, y: 0, z: 0, w: 0}
-  bishop2ResetRotation: {x: 0, y: 0, z: 0, w: 0}
-  kingResetRotation: {x: 0, y: 0, z: 0, w: 0}
-  remoteResetRotation: {x: 0, y: 0, z: 0, w: 0}
-  blueFlowerResetRotation: {x: 0, y: 0, z: 0, w: 0}
-  redFlowerResetRotation: {x: 0, y: 0, z: 0, w: 0}
-  yellowFlowerResetRotation: {x: 0, y: 0, z: 0, w: 0}
-  orangeFlowerResetRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5887742785550340533
 GameObject:
   m_ObjectHideFlags: 0

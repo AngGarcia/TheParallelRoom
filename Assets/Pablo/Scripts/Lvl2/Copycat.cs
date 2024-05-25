@@ -11,6 +11,8 @@ public class Copycat : MonoBehaviour
 
     [SerializeField] private bool isCopycatCharacter;
     [SerializeField] private Transform cameraToCopy;
+
+    [SerializeField] private float heightModifier;
     
 
     // Start is called before the first frame update
@@ -29,7 +31,8 @@ public class Copycat : MonoBehaviour
 
         if(isCopycatCharacter)
         {
-            this.gameObject.transform.localEulerAngles = new Vector3(-cameraToCopy.localEulerAngles.x, 180-(cameraToCopy.localEulerAngles.y), cameraToCopy.localEulerAngles.z);
+            this.gameObject.transform.position = new Vector3(-distance.x, -distance.y+heightModifier, distance.z);
+            this.gameObject.transform.localEulerAngles = new Vector3(cameraToCopy.localEulerAngles.x, -(cameraToCopy.localEulerAngles.y), -cameraToCopy.localEulerAngles.z);
         }
         else
         {

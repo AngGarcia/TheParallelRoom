@@ -15,27 +15,27 @@ public class TpToOriginPosition : MonoBehaviour
     [SerializeField] private GameObject yellowFlower;
     [SerializeField] private GameObject orangeFlower;
 
-    [SerializeField] private Vector3 pawnResetPosition;
-    [SerializeField] private Vector3 knightResetPosition;
-    [SerializeField] private Vector3 bishop1ResetPosition;
-    [SerializeField] private Vector3 bishop2ResetPosition;
-    [SerializeField] private Vector3 kingResetPosition;
-    [SerializeField] private Vector3 remoteResetPosition;
-    [SerializeField] private Vector3 blueFlowerResetPosition;
-    [SerializeField] private Vector3 redFlowerResetPosition;
-    [SerializeField] private Vector3 yellowFlowerResetPosition;
-    [SerializeField] private Vector3 orangeFlowerResetPosition;
+    private Vector3 pawnResetPosition;
+    private Vector3 knightResetPosition;
+    private Vector3 bishop1ResetPosition;
+    private Vector3 bishop2ResetPosition;
+    private Vector3 kingResetPosition;
+    private Vector3 remoteResetPosition;
+    private Vector3 blueFlowerResetPosition;
+    private Vector3 redFlowerResetPosition;
+    private Vector3 yellowFlowerResetPosition;
+    private Vector3 orangeFlowerResetPosition;
 
-    [SerializeField] private Quaternion pawnResetRotation;
-    [SerializeField] private Quaternion knightResetRotation;
-    [SerializeField] private Quaternion bishop1ResetRotation;
-    [SerializeField] private Quaternion bishop2ResetRotation;
-    [SerializeField] private Quaternion kingResetRotation;
-    [SerializeField] private Quaternion remoteResetRotation;
-    [SerializeField] private Quaternion blueFlowerResetRotation;
-    [SerializeField] private Quaternion redFlowerResetRotation;
-    [SerializeField] private Quaternion yellowFlowerResetRotation;
-    [SerializeField] private Quaternion orangeFlowerResetRotation;
+    private Quaternion pawnResetRotation;
+    private Quaternion knightResetRotation;
+    private Quaternion bishop1ResetRotation;
+    private Quaternion bishop2ResetRotation;
+    private Quaternion kingResetRotation;
+    private Quaternion remoteResetRotation;
+    private Quaternion blueFlowerResetRotation;
+    private Quaternion redFlowerResetRotation;
+    private Quaternion yellowFlowerResetRotation;
+    private Quaternion orangeFlowerResetRotation;
 
 
     // Start is called before the first frame update
