@@ -212,6 +212,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: {fileID: 1477731814}
+--- !u!1 &221693717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7856548749104875509, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+  m_PrefabInstance: {fileID: 377775212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &221693719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221693717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c10476dec5ec34682c62b8fafbc9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttachPoint: {fileID: 608872946}
+  puzzle: {fileID: 751611541}
+  vaseType: 3
+  toAddYellow: 0
+  toAddOrange: 0
 --- !u!1 &339557923
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +460,10 @@ PrefabInstance:
     - target: {fileID: 225754962264315948, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 233638344197293537, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 244374251659500514, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       propertyPath: m_Enabled
@@ -774,6 +800,18 @@ PrefabInstance:
     - target: {fileID: 1365435993936530708, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       propertyPath: m_StaticShadowCaster
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1376452437100780459, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1376452437100780459, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 33.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1376452437100780459, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1404970853783598537, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       propertyPath: m_Layer
@@ -5359,6 +5397,26 @@ PrefabInstance:
       propertyPath: m_StaticShadowCaster
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2942792203961088331, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 39.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942792203961088331, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942792203961088331, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942792203961088331, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942792203961088331, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2989558542036105309, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -5955,6 +6013,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4757563192465498279, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4770825404987454062, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -6162,11 +6224,11 @@ PrefabInstance:
     - target: {fileID: 5475302035932439180, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       propertyPath: orangeFlower
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 545523622}
     - target: {fileID: 5475302035932439180, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       propertyPath: yellowFlower
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1258317668}
     - target: {fileID: 5476120491521391104, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -6302,6 +6364,10 @@ PrefabInstance:
     - target: {fileID: 5899731910431137663, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912653569177900077, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5936436491373234267, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       propertyPath: m_Layer
@@ -10707,6 +10773,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6901623639447643175, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: OrangeVase
+      value: 
+      objectReference: {fileID: 221693719}
+    - target: {fileID: 6901623639447643175, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: YellowVase
+      value: 
+      objectReference: {fileID: 517780599}
     - target: {fileID: 6921881033343726708, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -10919,6 +10993,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7720376025431934119, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7724407585907964440, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -11023,6 +11101,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8157717841385685996, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: OrangeVase
+      value: 
+      objectReference: {fileID: 221693719}
+    - target: {fileID: 8157717841385685996, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      propertyPath: YellowVase
+      value: 
+      objectReference: {fileID: 517780599}
     - target: {fileID: 8169815279214537158, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -11418,6 +11504,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8327671934463428756, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 377775216}
+    - targetCorrespondingSourceObject: {fileID: 2232609486369113250, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 517780599}
+    - targetCorrespondingSourceObject: {fileID: 7856548749104875509, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 221693719}
   m_SourcePrefab: {fileID: 100100000, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
 --- !u!59 &377775213 stripped
 HingeJoint:
@@ -12125,6 +12217,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8686d75a49ab89846904cdc36f89663b, type: 3}
+--- !u!1 &517780598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2232609486369113250, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+  m_PrefabInstance: {fileID: 377775212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &517780599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517780598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c10476dec5ec34682c62b8fafbc9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttachPoint: {fileID: 1013922145}
+  puzzle: {fileID: 751611541}
+  vaseType: 1
+  toAddYellow: 0
+  toAddOrange: 0
 --- !u!1 &545523622
 GameObject:
   m_ObjectHideFlags: 0
@@ -12173,6 +12287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0186ab68ed9b2d84f9abc0dbcc7beaff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBeingGrabbed: 0
 --- !u!54 &545523627
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12228,6 +12343,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4116700316270580394, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
   m_PrefabInstance: {fileID: 377775212}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &608872946 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2942792203961088331, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+  m_PrefabInstance: {fileID: 377775212}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &751611541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5475302035932439180, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+  m_PrefabInstance: {fileID: 377775212}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ec16bd18d4a61448ba3eeb8845137c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &945544222
 GameObject:
   m_ObjectHideFlags: 0
@@ -12259,6 +12390,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 545523623}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1013922145 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1376452437100780459, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
+  m_PrefabInstance: {fileID: 377775212}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1172618635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6968411136069576809, guid: b5f80621c0c45204cbc19939563ecad4, type: 3}
@@ -12278,7 +12414,7 @@ GameObject:
   - component: {fileID: 1258317672}
   m_Layer: 0
   m_Name: yellow
-  m_TagString: Untagged
+  m_TagString: YellowFlower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12334,6 +12470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0186ab68ed9b2d84f9abc0dbcc7beaff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBeingGrabbed: 0
 --- !u!54 &1258317672
 Rigidbody:
   m_ObjectHideFlags: 0

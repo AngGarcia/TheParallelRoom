@@ -9,7 +9,9 @@ public class FlowerSocketControl : MonoBehaviour
     public XRSocketInteractor socket;
     public FlowerPuzzle puzzle;
     private GameObject item;
-    
+    [SerializeField] private CustomFlowerSocket YellowVase;
+    [SerializeField] private CustomFlowerSocket OrangeVase;
+
     //0=BLUE
     //1=YELLOW
     //2=RED
@@ -27,7 +29,7 @@ public class FlowerSocketControl : MonoBehaviour
         if (item.CompareTag("BlueFlower") && vaseType == 0)
         {
             puzzle.numSolved++;
-            if(puzzle.numSolved>=puzzle.numToSolve)
+            if(puzzle.numSolved + YellowVase.toAddYellow + OrangeVase.toAddOrange >=puzzle.numToSolve)
             {
                 puzzle.winPuzzle();
             }
@@ -35,7 +37,7 @@ public class FlowerSocketControl : MonoBehaviour
         else if (item.CompareTag("YellowFlower") && vaseType == 1)
         {
             puzzle.numSolved++;
-            if (puzzle.numSolved >= puzzle.numToSolve)
+            if (puzzle.numSolved + YellowVase.toAddYellow + OrangeVase.toAddOrange >= puzzle.numToSolve)
             {
                 puzzle.winPuzzle();
             }
@@ -43,7 +45,7 @@ public class FlowerSocketControl : MonoBehaviour
         else if (item.CompareTag("RedFlower") && vaseType == 2)
         {
             puzzle.numSolved++;
-            if (puzzle.numSolved >= puzzle.numToSolve)
+            if (puzzle.numSolved + YellowVase.toAddYellow + OrangeVase.toAddOrange >= puzzle.numToSolve)
             {
                 puzzle.winPuzzle();
             }
@@ -51,7 +53,7 @@ public class FlowerSocketControl : MonoBehaviour
         else if (item.CompareTag("OrangeFlower") && vaseType == 3)
         {
             puzzle.numSolved++;
-            if (puzzle.numSolved >= puzzle.numToSolve)
+            if (puzzle.numSolved + YellowVase.toAddYellow + OrangeVase.toAddOrange >= puzzle.numToSolve)
             {
                 puzzle.winPuzzle();
             }
