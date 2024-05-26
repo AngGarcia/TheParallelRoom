@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lvl1_Mines.unity
     guid: 53493ed2122dafb43a80abd07416d5b5
+  - enabled: 1
+    path: "Assets/Scenes/Lvl2_Habitaci\xF3n.unity"
+    guid: 8225eb16c733ded4dad5775d2cf175a4
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 886083ab9b911554a849e234e8fd2827, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: fc0ab66617dfbea4db0abbcaf1729c1c, type: 2}
