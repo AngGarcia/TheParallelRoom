@@ -764,6 +764,42 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8686d75a49ab89846904cdc36f89663b, type: 3}
+--- !u!4 &682999548 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 629947605736482966, guid: 72e81d414a8f07c44b13b8f961643009, type: 3}
+  m_PrefabInstance: {fileID: 1153197205289456909}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &728220386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 728220387}
+  m_Layer: 0
+  m_Name: PokeTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &728220387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728220386}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.134, y: 0.237, z: 0.329}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 682999548}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &797212519 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8764770503459175961, guid: 72e81d414a8f07c44b13b8f961643009, type: 3}
@@ -882,6 +918,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: OfficeRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 2599040177153074261, guid: 72e81d414a8f07c44b13b8f961643009, type: 3}
+      propertyPath: blueFlower
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719674620596683884, guid: 72e81d414a8f07c44b13b8f961643009, type: 3}
+      propertyPath: button1
+      value: 
+      objectReference: {fileID: 728220387}
+    - target: {fileID: 2719674620596683884, guid: 72e81d414a8f07c44b13b8f961643009, type: 3}
+      propertyPath: distance
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3665088165330857585, guid: 72e81d414a8f07c44b13b8f961643009, type: 3}
       propertyPath: m_Convex
       value: 0
@@ -926,6 +974,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7070845079272420824, guid: 72e81d414a8f07c44b13b8f961643009, type: 3}
+      propertyPath: button1
+      value: 
+      objectReference: {fileID: 728220387}
+    - target: {fileID: 7070845079272420824, guid: 72e81d414a8f07c44b13b8f961643009, type: 3}
+      propertyPath: distance
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7465312990511604228, guid: 72e81d414a8f07c44b13b8f961643009, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -966,7 +1022,10 @@ PrefabInstance:
     - {fileID: 3740805066901449746, guid: 72e81d414a8f07c44b13b8f961643009, type: 3}
     m_RemovedGameObjects:
     - {fileID: 264170529344766413, guid: 72e81d414a8f07c44b13b8f961643009, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 629947605736482966, guid: 72e81d414a8f07c44b13b8f961643009, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 728220387}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3420944078683240928, guid: 72e81d414a8f07c44b13b8f961643009, type: 3}
       insertIndex: -1

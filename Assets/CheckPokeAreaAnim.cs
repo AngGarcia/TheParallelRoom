@@ -13,7 +13,7 @@ public class CheckPokeAreaAnim : MonoBehaviour
     private Vector3 rightControllerPos;
     private Vector3 buttonPos1;
     private Vector3 buttonPos2;
-    private float distance;
+    [SerializeField] private float distance = 0.5f;
     [SerializeField] private bool isRightHand;
     private CheckGrabPressed checkGrabPressed;
     private Animator animator;
@@ -28,7 +28,7 @@ public class CheckPokeAreaAnim : MonoBehaviour
             buttonPos2 = button2.GetComponent<Transform>().position;
         }
         
-        distance = 0.5f;
+        //distance = 0.5f;
     }
 
     // Update is called once per frame
