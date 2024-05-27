@@ -61,7 +61,7 @@ public class TNT : MonoBehaviour
         if (distance <= distanceToDie)
         {
             MusicManager.Instance.PlaySound(AppSounds.PLAYER_DEATH);
-            GameManager.SceneChangerInstance.mainMenu();
+            SceneChanger.Instance.mainMenu();
         }
         else
         {

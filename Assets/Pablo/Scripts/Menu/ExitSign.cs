@@ -6,6 +6,6 @@ public class ExitSign : MonoBehaviour
 {
     public void quitGame()
     {
-        GameManager.SceneChangerInstance.exitGame();
+        SceneChanger.Instance.exitGame();
     }
 }

@@ -9,7 +9,7 @@ public class GameManager : PersistentSingleton<GameManager>
     private string saveSlot1;
     private static CommonVariables commonVariablesInstance;
     private static LastSceneData lastSceneDataInstance;
-    private static SceneChanger sceneChangerInstance;
+    //private static SceneChanger sceneChangerInstance;
 
     public int level=0;
 
@@ -28,13 +28,13 @@ public class GameManager : PersistentSingleton<GameManager>
         }
     }
 
-    public static SceneChanger SceneChangerInstance
-    {
-        get
-        {
-            return sceneChangerInstance;
-        }
-    }
+    //public static SceneChanger SceneChangerInstance
+    //{
+    //    get
+    //    {
+    //        return sceneChangerInstance;
+    //    }
+    //}
 
     private void Awake()
     {
@@ -49,7 +49,7 @@ public class GameManager : PersistentSingleton<GameManager>
 
         lastSceneDataInstance = new LastSceneData();
 
-        sceneChangerInstance = this.gameObject.GetComponent<SceneChanger>();
+        //sceneChangerInstance = this.gameObject.GetComponent<SceneChanger>();
 
         loadFromJson();
 

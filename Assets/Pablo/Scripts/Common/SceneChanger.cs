@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneChanger : MonoBehaviour
+public class SceneChanger : PersistentSingleton<SceneChanger>
 {
     // Start is called before the first frame update
     //public AudioSource audioSource;
@@ -13,8 +13,9 @@ public class SceneChanger : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        if(GameObject.FindWithTag("faderScreen")!=null)
-            fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        //if(GameObject.FindWithTag("faderScreen")!=null)
+        //    fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
     }
 
 
@@ -54,48 +55,82 @@ public class SceneChanger : MonoBehaviour
 
     IEnumerator delayLvl1()
     {
+        int counter = 100;
         fadeScreen.FadeOut();
 
         yield return new WaitForSecondsRealtime(fadeScreen.fadeDuration);
 
-        SceneManager.LoadScene("Lvl1_Mines");
+        
         GameManager.Instance.level = 1;
         GameManager.Instance.saveToJson();
         Cursor.lockState = CursorLockMode.Locked;
-        if (GameObject.FindWithTag("faderScreen") != null)
-        {
-            fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
-            Debug.Log("BUSCO FADER SCREEN");
-        }
-            
+        //while (fadeScreen == null && counter >= 0)
+        //{
+        //    if (GameObject.FindWithTag("faderScreen") != null)
+        //    {
+        //        fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
+        //        Debug.Log("BUSCO FADER SCREEN 2");
+        //    }
+        //    counter--;
+        //}
+        SceneManager.LoadScene("Lvl1_Mines");
     }
 
     IEnumerator delayLvl2()
     {
+        int counter = 100;
         fadeScreen.FadeOut();
 
         yield return new WaitForSecondsRealtime(fadeScreen.fadeDuration);
 
-        SceneManager.LoadScene("Lvl2_Habitación");
+        
         GameManager.Instance.level = 2;
         GameManager.Instance.saveToJson();
         Cursor.lockState = CursorLockMode.Locked;
-        if (GameObject.FindWithTag("faderScreen") != null)
-        {
-            fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
-            Debug.Log("BUSCO FADER SCREEN");
-        }
-
+        //while (fadeScreen == null && counter >= 0)
+        //{
+        //    if (GameObject.FindWithTag("faderScreen") != null)
+        //    {
+        //        fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
+        //        Debug.Log("BUSCO FADER SCREEN 2");
+        //    }
+        //    counter--;
+        //}
+        SceneManager.LoadScene("Lvl2_Habitacion");
     }
 
     IEnumerator delayMainMenuScreen()
     {
+        int counter = 100;
         fadeScreen.FadeOut();
         
         yield return new WaitForSeconds(fadeScreen.fadeDuration);
 
+        
+
+        GameManager.Instance.saveToJson();
+        Cursor.lockState = CursorLockMode.Locked;
+        //while(fadeScreen == null && counter>=0)
+        //{
+        //    if (GameObject.FindWithTag("faderScreen") != null)
+        //    {
+        //        fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
+        //        Debug.Log("BUSCO FADER SCREEN 2");
+        //    }
+        //    counter--;
+        //}
+
         SceneManager.LoadScene("MainMenu");
-        Cursor.lockState = CursorLockMode.Confined;
+
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
         if (GameObject.FindWithTag("faderScreen") != null)
             fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
     }

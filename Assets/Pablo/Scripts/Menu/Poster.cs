@@ -10,7 +10,7 @@ public class Poster : MonoBehaviour
     public Material poster2;
     public Material poster3;
 
-    private bool canChangeScene = true;
+    [SerializeField] private bool canChangeScene = true;
 
 
     private void Start()
@@ -72,20 +72,22 @@ public class Poster : MonoBehaviour
 
     public void goToLvl1()
     {
-        GameManager.SceneChangerInstance.lvl1();
-        StartCoroutine(resetButton());
+
+        //StartCoroutine(resetButton());
+        SceneChanger.Instance.lvl1();
 
     }
 
     public void goToLvl2()
     {
-        GameManager.SceneChangerInstance.lvl2();
-        StartCoroutine(resetButton());
+        Debug.Log("INTENTO ENTRAR A LVL2");
+        //StartCoroutine(resetButton());
+        SceneChanger.Instance.lvl2();
     }
 
     public void goToLvl3()
     {
-        GameManager.SceneChangerInstance.lvl1();
+        SceneChanger.Instance.lvl1();
 
     }
 
@@ -108,16 +110,18 @@ public class Poster : MonoBehaviour
 
             //else
             //{
-            if (GameManager.Instance.level <= 1)
-            {
-                canChangeScene = false;
-                goToLvl1();
-            }
-            else if(GameManager.Instance.level == 2)
-            {
-                canChangeScene = false;
-                goToLvl2();
-            }
+            //if (GameManager.Instance.level <= 1)
+            //{
+            //    canChangeScene = false;
+            //    goToLvl1();
+            //}
+            //else if(GameManager.Instance.level == 2)
+            //{
+            //    canChangeScene = false;
+            //    goToLvl2();
+            //}
+            canChangeScene = false;
+            StartCoroutine(resetButton());
                 
             //}
         }
@@ -127,6 +131,16 @@ public class Poster : MonoBehaviour
     IEnumerator resetButton()
     {
         yield return new WaitForSeconds(2.0f);
+
+        if (GameManager.Instance.level <= 1)
+        {
+            goToLvl1();
+        }
+        else if (GameManager.Instance.level == 2)
+        {
+            goToLvl2();
+        }
+        
         canChangeScene = true;
     }
 }

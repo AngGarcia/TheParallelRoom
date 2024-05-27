@@ -227,6 +227,6 @@ public class GameMenuManager : MonoBehaviour
 
     public void onQuitToMenu()
     {
-        GameManager.SceneChangerInstance.mainMenu();
+        SceneChanger.Instance.mainMenu();
     }
 }

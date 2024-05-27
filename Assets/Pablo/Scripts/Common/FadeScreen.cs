@@ -16,7 +16,7 @@ public class FadeScreen : MonoBehaviour
             FadeIn();
 
         if (GameObject.FindWithTag("faderScreen") != null)
-            GameManager.SceneChangerInstance.fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
+            SceneChanger.Instance.fadeScreen = GameObject.FindWithTag("faderScreen").GetComponent<FadeScreen>();
     }
 
     public void FadeIn()

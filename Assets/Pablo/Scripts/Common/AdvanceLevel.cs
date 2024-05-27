@@ -17,7 +17,7 @@ public class AdvanceLevel : MonoBehaviour
                 }
                 GameManager.Instance.level++;
                 GameManager.Instance.saveToJson();
-                GameManager.SceneChangerInstance.mainMenu();
+                SceneChanger.Instance.mainMenu();
             }
         }
         else
@@ -30,7 +30,7 @@ public class AdvanceLevel : MonoBehaviour
                 }
                 GameManager.Instance.level = 1;
                 GameManager.Instance.saveToJson();
-                GameManager.SceneChangerInstance.mainMenu();
+                SceneChanger.Instance.mainMenu();
             }
         }
     }
