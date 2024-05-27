@@ -19,19 +19,18 @@ public class CopycatGrab : MonoBehaviour
         //    other.gameObject.transform.SetParent(null);
         //}
 
-        if (other.gameObject.GetComponent<GrabCheck>() == null || !grabButton.action.IsPressed() || menu1.activeSelf || menu2.activeSelf)
+        
+        if (other.gameObject.GetComponent<Rigidbody>() != null)
         {
-            if (other.gameObject.GetComponent<Rigidbody>() != null)
-            {
-                other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
-            }
-
-            if (other.gameObject.GetComponent<GrabCheck>() != null)
-            {
-                other.gameObject.GetComponent<GrabCheck>().isBeingGrabbed = false;
-            }
-
+            other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         }
+
+        if (other.gameObject.GetComponent<GrabCheck>() != null)
+        {
+            other.gameObject.GetComponent<GrabCheck>().isBeingGrabbed = false;
+        }
+
+        
     }
 
     private void OnTriggerStay(Collider other)
