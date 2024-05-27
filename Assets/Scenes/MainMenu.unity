@@ -245,6 +245,7 @@ MonoBehaviour:
   poster1: {fileID: 2100000, guid: 982309d589be4e047b1fc26ed3d882a7, type: 2}
   poster2: {fileID: 2100000, guid: d89e2de3ef7f8b34299a577a3dfe2a77, type: 2}
   poster3: {fileID: 2100000, guid: 88f504f4383ff7442958a43077af68ea, type: 2}
+  canChangeScene: 1
 --- !u!1 &132250377
 GameObject:
   m_ObjectHideFlags: 0
