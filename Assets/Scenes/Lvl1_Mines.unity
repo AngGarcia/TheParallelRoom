@@ -1411,10 +1411,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 602597990}
-    - target: {fileID: 3482710247828760599, guid: 5c94b234c4640ac4ebcc2c52d9da53e5, type: 3}
-      propertyPath: distanceToDie
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5093049049720279925, guid: 5c94b234c4640ac4ebcc2c52d9da53e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.441
