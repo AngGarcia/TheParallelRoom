@@ -8,4 +8,9 @@ public class ExitSign : MonoBehaviour
     {
         SceneChanger.Instance.exitGame();
     }
+
+    public void test()
+    {
+        Debug.Log("HOLAAAAAAAAAAAAAAAAAAAAAAAA");
+    }
 }

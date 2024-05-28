@@ -28,6 +28,8 @@ TagManager:
   - Bishop2
   - King
   - Remote
+  - PokeLeft
+  - PokeRight
   layers:
   - Default
   - TransparentFX

@@ -47,7 +47,9 @@ public class SceneChanger : PersistentSingleton<SceneChanger>
 
     public void exitGame()
     {
-        StartCoroutine(delayExit());
+        //Debug.Log("INTENTO SALIR");
+        Application.Quit();
+        //StartCoroutine(delayExit());
         //MusicManager.Instance.StopBackgroundMusic();
         //Application.Quit();
 

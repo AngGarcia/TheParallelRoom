@@ -21,13 +21,12 @@ public class MenuButton : MonoBehaviour
     private Vector3 buttonPos;
     private Vector3 leftControllerPos;
     private Vector3 rightControllerPos;
-    private float distance;
+    [SerializeField] private float distance = 0.5f;
 
     // Start is called before the first frame update
     void Start()
     {
         buttonPos = this.gameObject.GetComponent<Transform>().position;
-        distance = 0.5f;
     }
 
     // Update is called once per frame
@@ -44,7 +43,9 @@ public class MenuButton : MonoBehaviour
         }
         else
         {
+            //Debug.Log("Activo Poke Izquierdo");
             pokeInteractorLeft.SetActive(true);
+            //Debug.Log(pokeInteractorLeft.gameObject.activeSelf);
             leftControllerCollider.enabled = false;
         }
 
