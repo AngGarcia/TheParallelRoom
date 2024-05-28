@@ -43,6 +43,6 @@ public class AppSounds
     public static readonly string TV_CONTROLLER_CLICK = "tvControllerClick";
     public static readonly string TV_STATIC = "tvStatic";
     public static readonly string UNLOCK_SAFE = "unlockSafe";
-
+    public static readonly string SAFE_WRONG = "safeWrong";
 }
 

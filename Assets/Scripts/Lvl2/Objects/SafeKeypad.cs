@@ -109,7 +109,7 @@ public class SafeKeypad : MonoBehaviour
     {
         if (!done)
         {
-            MusicManager.Instance.PlaySound(AppSounds.SAFE_BUTTON);
+            MusicManager.Instance.PlaySound(AppSounds.SAFE_WRONG);
             canType = true;
             actualNum = "";
         }
