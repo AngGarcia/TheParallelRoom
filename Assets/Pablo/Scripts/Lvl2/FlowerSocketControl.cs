@@ -9,8 +9,6 @@ public class FlowerSocketControl : MonoBehaviour
     public XRSocketInteractor socket;
     public FlowerPuzzle puzzle;
     private GameObject item;
-    [SerializeField] private CustomFlowerSocket YellowVase;
-    [SerializeField] private CustomFlowerSocket OrangeVase;
 
     //0=BLUE
     //1=YELLOW
@@ -28,8 +26,10 @@ public class FlowerSocketControl : MonoBehaviour
         item = socket.selectTarget.gameObject;
         if (item.CompareTag("BlueFlower") && vaseType == 0)
         {
+            
             puzzle.numSolved++;
-            if(puzzle.numSolved + YellowVase.toAddYellow + OrangeVase.toAddOrange >=puzzle.numToSolve)
+            Debug.Log("SUMO AZUL, NUM SOLVED: " + puzzle.numSolved);
+            if (puzzle.numSolved + puzzle.toAddYellow + puzzle.toAddOrange >=puzzle.numToSolve)
             {
                 puzzle.winPuzzle();
             }
@@ -37,7 +37,7 @@ public class FlowerSocketControl : MonoBehaviour
         else if (item.CompareTag("YellowFlower") && vaseType == 1)
         {
             puzzle.numSolved++;
-            if (puzzle.numSolved + YellowVase.toAddYellow + OrangeVase.toAddOrange >= puzzle.numToSolve)
+            if (puzzle.numSolved + puzzle.toAddYellow + puzzle.toAddOrange >= puzzle.numToSolve)
             {
                 puzzle.winPuzzle();
             }
@@ -45,7 +45,8 @@ public class FlowerSocketControl : MonoBehaviour
         else if (item.CompareTag("RedFlower") && vaseType == 2)
         {
             puzzle.numSolved++;
-            if (puzzle.numSolved + YellowVase.toAddYellow + OrangeVase.toAddOrange >= puzzle.numToSolve)
+            Debug.Log("SUMO ROJO, NUM SOLVED: " + puzzle.numSolved);
+            if (puzzle.numSolved + puzzle.toAddYellow + puzzle.toAddOrange >= puzzle.numToSolve)
             {
                 puzzle.winPuzzle();
             }
@@ -53,7 +54,7 @@ public class FlowerSocketControl : MonoBehaviour
         else if (item.CompareTag("OrangeFlower") && vaseType == 3)
         {
             puzzle.numSolved++;
-            if (puzzle.numSolved + YellowVase.toAddYellow + OrangeVase.toAddOrange >= puzzle.numToSolve)
+            if (puzzle.numSolved + puzzle.toAddYellow + puzzle.toAddOrange >= puzzle.numToSolve)
             {
                 puzzle.winPuzzle();
             }

@@ -15,8 +15,6 @@ public class CustomFlowerSocket : MonoBehaviour
     private bool yellowCheck = false;
     private bool orangeCheck = false;
 
-    public int toAddYellow = 0;
-    public int toAddOrange = 0;
     //public InputActionProperty grabButtonLeft;
     //public InputActionProperty grabButtonRight;
     // Start is called before the first frame update
@@ -41,10 +39,10 @@ public class CustomFlowerSocket : MonoBehaviour
             if (vaseType==1 && !yellowCheck)
             {
                 yellowCheck = true;
-                toAddYellow = 1;
-                Debug.Log(puzzle.numSolved + toAddYellow + toAddOrange);
+                puzzle.toAddYellow = 1;
+                Debug.Log(puzzle.numSolved + puzzle.toAddYellow + puzzle.toAddOrange);
                 //puzzle.numSolved++;
-                if ((puzzle.numSolved + toAddYellow + toAddOrange) >= puzzle.numToSolve)
+                if ((puzzle.numSolved + puzzle.toAddYellow + puzzle.toAddOrange) >= puzzle.numToSolve)
                 {
                     puzzle.winPuzzle();
                 }
@@ -59,10 +57,10 @@ public class CustomFlowerSocket : MonoBehaviour
             if (vaseType == 3 && !orangeCheck)
             {
                 orangeCheck = true;
-                toAddOrange = 1;
-                Debug.Log(puzzle.numSolved + toAddYellow + toAddOrange);
+                puzzle.toAddOrange = 1;
+                Debug.Log(puzzle.numSolved + puzzle.toAddYellow + puzzle.toAddOrange);
                 //puzzle.numSolved++;
-                if ((puzzle.numSolved + toAddYellow + toAddOrange) >= puzzle.numToSolve)
+                if ((puzzle.numSolved + puzzle.toAddYellow + puzzle.toAddOrange) >= puzzle.numToSolve)
                 {
                     puzzle.winPuzzle();
                 }
@@ -79,10 +77,11 @@ public class CustomFlowerSocket : MonoBehaviour
             if (vaseType == 1 && !yellowCheck)
             {
                 yellowCheck = true;
-                toAddYellow = 1;
-                Debug.Log(puzzle.numSolved + toAddYellow + toAddOrange);
+                puzzle.toAddYellow = 1;
+                Debug.Log("SUMO AMARILLO, NUM SOLVED: " + (puzzle.numSolved + puzzle.toAddYellow + puzzle.toAddOrange));
+                Debug.Log(puzzle.numSolved + puzzle.toAddYellow + puzzle.toAddOrange);
                 //puzzle.numSolved++;
-                if ((puzzle.numSolved + toAddYellow + toAddOrange) >= puzzle.numToSolve)
+                if ((puzzle.numSolved + puzzle.toAddYellow + puzzle.toAddOrange) >= puzzle.numToSolve)
                 {
                     puzzle.winPuzzle();
                 }
@@ -97,10 +96,11 @@ public class CustomFlowerSocket : MonoBehaviour
             if (vaseType == 3 && !orangeCheck)
             {
                 orangeCheck = true;
-                toAddOrange = 1;
-                Debug.Log(puzzle.numSolved + toAddYellow + toAddOrange);
+                puzzle.toAddOrange = 1;
+                Debug.Log("SUMO NARANJA, NUM SOLVED: " + (puzzle.numSolved + puzzle.toAddYellow + puzzle.toAddOrange));
+                Debug.Log(puzzle.numSolved + puzzle.toAddYellow + puzzle.toAddOrange);
                 //puzzle.numSolved++;
-                if ((puzzle.numSolved + toAddYellow + toAddOrange) >= puzzle.numToSolve)
+                if ((puzzle.numSolved + puzzle.toAddYellow + puzzle.toAddOrange) >= puzzle.numToSolve)
                 {
                     puzzle.winPuzzle();
                 }
@@ -114,14 +114,14 @@ public class CustomFlowerSocket : MonoBehaviour
         {
             other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             yellowCheck = false;
-            toAddYellow = 0;
+            puzzle.toAddYellow = 0;
         }
 
         if (other.gameObject.tag == "OrangeFlower")
         {
             other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
             orangeCheck = false;
-            toAddOrange = 0;
+            puzzle.toAddOrange = 0;
         }
     }
 }

@@ -20,6 +20,8 @@ public class FlowerPuzzle : MonoBehaviour
 
     public int numToSolve = 4;
     public int numSolved = 0;
+    public int toAddYellow = 0;
+    public int toAddOrange = 0;
     public bool puzzlePassed = false;
 
     [SerializeField] private tableMarcos tableMarcos;
@@ -35,9 +37,9 @@ public class FlowerPuzzle : MonoBehaviour
         //Debug.Log("FLOWER PUZZLE PASSED");
         puzzlePassed = true;
         blueFlower.GetComponent<XRGrabInteractable>().enabled = false;
-        yellowFlower.GetComponent<XRGrabInteractable>().enabled = false;
+        //yellowFlower.GetComponent<XRGrabInteractable>().enabled = false;
         redFlower.GetComponent<XRGrabInteractable>().enabled = false;
-        orangeFlower.GetComponent<XRGrabInteractable>().enabled = false;
+        //orangeFlower.GetComponent<XRGrabInteractable>().enabled = false;
         //Deshabilitar sockets?
         blueSocket.GetComponent<XRSocketInteractor>().enabled = false;
         yellowSocket.GetComponent<XRSocketInteractor>().enabled = false;
@@ -48,6 +50,9 @@ public class FlowerPuzzle : MonoBehaviour
         yellowFlower.GetComponent<Rigidbody>().isKinematic = true;
         redFlower.GetComponent<Rigidbody>().isKinematic = true;
         orangeFlower.GetComponent<Rigidbody>().isKinematic = true;
+
+        yellowFlower.GetComponent<GrabCheck>().enabled = false;
+        orangeFlower.GetComponent<GrabCheck>().enabled = false;
 
         tableMarcos.unlockTableMarcos();
     }
